@@ -1,0 +1,11 @@
+/* Precise editorial line lengths on desktop; natural wrapping remains on mobile. */
+@media(min-width:1101px){
+  .home-hero h1{max-width:1160px;font-size:72px;line-height:.98}
+  .association-hero h1,.projects-hero h1{max-width:1160px;font-size:78px;white-space:nowrap}
+  .association-hero p,.projects-hero p{max-width:1160px;font-size:17px;white-space:nowrap}
+}
+@media(min-width:721px) and (max-width:1100px){
+  .home-hero h1{max-width:900px;font-size:60px}
+  .association-hero h1,.projects-hero h1{font-size:60px}
+  .association-hero p,.projects-hero p{max-width:900px;font-size:16px}
+}
