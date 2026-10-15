@@ -1,0 +1,8 @@
+.site-header{height:132px}
+.brand{width:570px;min-width:570px;gap:7px}
+.brand img{width:570px;max-height:84px}
+.brand:after{font-size:9.5px;letter-spacing:.115em}
+@media(max-width:1240px){.brand,.brand img{width:490px;min-width:490px}.links{gap:13px}.links a{font-size:10.5px}}
+@media(max-width:1080px){.brand,.brand img{width:390px;min-width:390px}.brand:after{font-size:7px;letter-spacing:.075em}}
+@media(max-width:720px){.site-header{height:102px}.brand,.brand img{width:280px;min-width:0}.brand img{max-height:67px}.brand:after{font-size:6.5px}.mobile-panel.open{top:102px}}
+@media(max-width:480px){.brand,.brand img{width:225px}.brand:after{max-width:225px;font-size:6px}}
