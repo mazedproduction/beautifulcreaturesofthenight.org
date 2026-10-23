@@ -1,18 +1,18 @@
 @media(max-width:720px){
   html,body{max-width:100%;overflow-x:hidden}
-  .site-header{height:118px}
+  .site-header{height:126px}
   .nav{position:relative;padding:0 10px;gap:0}
-  .brand,.brand img{width:calc(100vw - 68px);max-width:none;min-width:0}
-  .brand{gap:6px;padding-right:4px}
-  .brand img{max-height:78px;object-fit:contain;object-position:left center}
-  .brand:after{max-width:calc(100vw - 76px);font-size:clamp(7px,2vw,8.4px);letter-spacing:.025em;line-height:1.18;white-space:nowrap}
-  .language{position:absolute;right:10px;top:50%;margin:0;transform:translateY(-50%)}
+  .brand,.brand img{width:calc(100vw - 56px);max-width:none;min-width:0}
+  .brand{gap:5px;padding-right:4px}
+  .brand img{max-height:80px;object-fit:contain;object-position:left center}
+  .brand:after{max-width:calc(100vw - 88px);font-size:clamp(8.6px,2.55vw,10.4px);letter-spacing:.012em;line-height:1.16;white-space:normal}
+  .language{position:absolute;right:10px;top:auto;bottom:12px;margin:0;transform:none}
   .lang-toggle{width:auto;height:30px;padding:0 7px;border-color:rgba(230,220,235,.28);border-radius:4px;background:rgba(230,220,235,.05);color:rgba(230,220,235,.82);font-size:9px;letter-spacing:.08em;box-shadow:none}
   .lang-toggle:after{content:"⌄";display:inline-block;margin-left:3px;font-size:9px;line-height:1;opacity:.55;transform:translateY(-1px)}
   .lang-toggle:hover,.lang-toggle:focus-visible{background:rgba(230,220,235,.1);color:var(--lav);border-color:rgba(230,220,235,.45)}
   .lang-menu{top:36px;min-width:62px;border-color:rgba(230,220,235,.18);border-radius:4px;box-shadow:0 12px 28px rgba(0,0,0,.22)}
   .lang-menu button{text-align:center;font-size:10px}
-  .mobile-panel.open{top:118px;padding:28px 22px;gap:0;border-top:1px solid rgba(230,220,235,.14)}
+  .mobile-panel.open{top:126px;padding:28px 22px;gap:0;border-top:1px solid rgba(230,220,235,.14)}
   .mobile-panel a{padding:15px 0;border-bottom:1px solid rgba(230,220,235,.12);font-size:14px}
   .hero{min-height:auto;padding-top:72px;padding-bottom:78px}
   .page-hero{padding-top:70px;padding-bottom:62px}
@@ -43,8 +43,11 @@
   .definition-intro{font-size:19px;line-height:1.6}
 }
 @media(max-width:380px){
-  .brand,.brand img{width:calc(100vw - 62px)}
-  .brand:after{max-width:calc(100vw - 70px);font-size:6.6px;letter-spacing:.012em}
+  .site-header{height:132px}
+  .brand,.brand img{width:calc(100vw - 52px)}
+  .brand:after{max-width:calc(100vw - 82px);font-size:7.8px;letter-spacing:.006em}
+  .language{bottom:11px}
+  .mobile-panel.open{top:132px}
   .lang-toggle{height:28px;padding:0 6px}
   .hero h1,.page-hero h1,.association-hero h1,.projects-hero h1{font-size:clamp(38px,12vw,46px)}
 }
