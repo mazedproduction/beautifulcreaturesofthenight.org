@@ -1,0 +1,8 @@
+@media(max-width:720px){
+  .menu-button{display:none!important}
+  .brand{cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .brand:focus-visible{outline:2px solid var(--cyan);outline-offset:5px}
+  .nav{justify-content:space-between}
+  .language{margin-left:auto}
+  .mobile-panel.open{display:flex}
+}
