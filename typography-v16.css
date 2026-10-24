@@ -1,0 +1,28 @@
+:root{--display:"Manrope",Arial,sans-serif}
+
+/* Display typography now follows the strong geometric construction of the BCOTN wordmark. */
+h1,h2,h3,
+.section-title,
+.intro,
+.values,
+.project-art,
+.project-copy h2,
+.cta h2,
+.footer-logo,
+.team-monogram,
+.team-card h3,
+.definitions-words,
+.profile-initial,
+.profile-copy h1,
+.definition-entry h2{
+  font-family:var(--display);
+  font-weight:800;
+}
+
+/* Editorial text keeps the same family at a lighter weight for readability. */
+.letter p,
+.profile-bio,
+.definition-intro{
+  font-family:var(--display);
+  font-weight:400;
+}
