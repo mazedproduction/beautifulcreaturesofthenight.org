@@ -1,0 +1,12 @@
+/* Selected editorial titles use the serif voice from the BCOTN reference. */
+.page-home .section.alt .card h2,
+.page-home .section:not(.alt) .card h3,
+.page-mission .section-title,
+.page-programmes .page-hero h1,
+.page-programmes .card h2,
+.page-programmes .section-title,
+.page-programmes .cta h2{
+  font-family:"Fraunces",Georgia,serif;
+  font-weight:500;
+  letter-spacing:-.04em;
+}
