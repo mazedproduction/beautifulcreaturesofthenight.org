@@ -1,0 +1,18 @@
+/* Homepage statement: same dense geometric voice as the BCOTN wordmark. */
+.home-hero h1{
+  max-width:1160px;
+  font-family:"Manrope",Arial,sans-serif;
+  font-size:clamp(48px,3.9vw,58px);
+  font-weight:800;
+  line-height:.94;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+}
+
+@media(max-width:720px){
+  .home-hero h1{
+    font-size:clamp(39px,11vw,52px);
+    line-height:.95;
+    letter-spacing:-.05em;
+  }
+}
