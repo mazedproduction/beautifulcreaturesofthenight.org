@@ -1,0 +1,19 @@
+/* Motion and responsive type refinements requested for Mission, Association and Home. */
+.page-mission .values-marquee{width:100%;overflow:hidden;margin-top:8px}
+.page-mission .values-track{display:flex;align-items:center;width:max-content;animation:bcotn-values-right 22s linear infinite;will-change:transform}
+.page-mission .values-track span{flex:none;padding-right:.7em;font:800 clamp(44px,6vw,82px)/.98 "Manrope",sans-serif;letter-spacing:-.045em;white-space:nowrap}
+@keyframes bcotn-values-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.page-mission .cta h2{max-width:none;margin-left:auto;margin-right:auto;font-size:clamp(15px,4vw,56px);line-height:1;letter-spacing:-.045em;white-space:nowrap}
+.page-association .association-hero h1{max-width:100%;font-size:clamp(34px,3.88vw,53px);white-space:nowrap;overflow-wrap:normal}
+.page-home .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.page-home .footer-logo{margin:42px auto 0;text-align:center;text-transform:uppercase;white-space:nowrap;font-size:clamp(18px,3vw,38px);line-height:1;letter-spacing:-.035em}
+@media (prefers-reduced-motion:reduce){.page-mission .values-track{animation:none;transform:none}}
+@media(max-width:720px){
+  .page-mission .section.pink{padding-left:0;padding-right:0}
+  .page-mission .section.pink .kicker{padding-left:20px;padding-right:20px}
+  .page-mission .values-track span{font-size:clamp(38px,12vw,58px)}
+  .page-mission .cta{padding-left:10px;padding-right:10px}
+  .page-association .association-hero h1{font-size:clamp(31px,10vw,51px);white-space:normal;overflow-wrap:normal}
+  .page-home .footer-grid{grid-template-columns:1fr 1fr}
+  .page-home .footer-logo{font-size:clamp(14px,4.7vw,24px)}
+}
