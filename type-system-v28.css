@@ -1,0 +1,53 @@
+/* BCOTN typographic system — the homepage is the reference. */
+
+/* Institutional display voice: bold, geometric and direct. */
+.page-hero h1,
+.association-hero h1,
+.projects-hero h1,
+.profile-copy h1,
+.section-title,
+.cta h2,
+.intro,
+.values,
+.definitions-words {
+  font-family:"Manrope",Arial,sans-serif;
+  font-weight:800;
+}
+
+/* Editorial voice: projects, people, programmes and definition entries. */
+.card h2,
+.card h3,
+.project-copy h2,
+.team-card h3,
+.definition-entry h2,
+.letter p {
+  font-family:"Fraunces",Georgia,serif;
+  font-weight:500;
+  letter-spacing:-.04em;
+}
+
+/* Previously approved editorial exceptions remain part of the system. */
+.page-mission .section-title,
+.page-programmes .card h2,
+.page-programmes .section-title,
+.page-programmes .cta h2 {
+  font-family:"Fraunces",Georgia,serif;
+  font-weight:500;
+  letter-spacing:-.04em;
+}
+
+/* Reading and interface text consistently use the homepage body voice. */
+body,
+.body-copy,
+.card p,
+.project-copy p,
+.profile-bio,
+.definition-intro,
+.definition-entry p,
+.links a,
+.mobile-panel a,
+.button,
+.kicker,
+.meta {
+  font-family:"Manrope",Arial,sans-serif;
+}
