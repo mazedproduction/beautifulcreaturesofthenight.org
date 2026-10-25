@@ -26,7 +26,7 @@ es:{'Mission — BCOTN':'Misión — BCOTN','Programmes — BCOTN':'Programas �
 const originalTitle=document.title;
 const source=new Map();function remember(){const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const s=n.nodeValue.trim().replace(/\s+/g,' ');if(s&&n.parentElement&&!n.parentElement.closest('script,style,.lang-menu,.lang-toggle'))source.set(n,s)}}
 function setLanguage(lang){if(!['en','fr','es'].includes(lang))lang='en';const d=lang==='en'?en:lang==='es'?es:fr;document.documentElement.lang=lang;source.forEach((s,n)=>{n.nodeValue=n.nodeValue.replace(n.nodeValue.trim(),d[s]||s)});document.title=pageTitles[lang]?.[originalTitle]||originalTitle;const toggle=document.querySelector('.lang-toggle');toggle.textContent=lang.toUpperCase();toggle.setAttribute('aria-label',lang==='fr'?'Changer de langue':lang==='es'?'Cambiar idioma':'Change language');toggle.setAttribute('aria-expanded','false');document.querySelectorAll('.lang-menu button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('bcotn-language',lang);document.querySelector('.lang-menu').classList.remove('open')}
-const mobilePanel=document.querySelector('.mobile-panel'),menuButton=document.querySelector('.menu-button'),mobileQuery=window.matchMedia('(max-width:900px)');
+const mobilePanel=document.querySelector('.mobile-panel'),menuButton=document.querySelector('.menu-button'),mobileQuery=window.matchMedia('(max-width:980px)');
 function setMobileMenu(open){mobilePanel?.classList.toggle('open',open);menuButton?.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open&&mobileQuery.matches)}
 menuButton?.addEventListener('click',()=>setMobileMenu(!mobilePanel?.classList.contains('open')));
 mobilePanel?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMobileMenu(false)));
@@ -39,5 +39,4 @@ languageToggle.addEventListener('click',e=>{e.stopPropagation();const open=!lang
 picker.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
 document.addEventListener('click',()=>{languageMenu.classList.remove('open');languageToggle.setAttribute('aria-expanded','false')});
 const currentPath=location.pathname.replace(/\/+$/,'')||'/';document.querySelectorAll('.links a,.mobile-panel a').forEach(a=>{const path=new URL(a.href,location.href).pathname.replace(/\/+$/,'')||'/';if(path===currentPath)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-const header=document.querySelector('.site-header');let scrollFrame=0;function updateHeader(){header?.classList.toggle('is-compact',!mobileQuery.matches&&window.scrollY>72);scrollFrame=0}window.addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(updateHeader)},{passive:true});mobileQuery.addEventListener?.('change',updateHeader);updateHeader();
 setLanguage(localStorage.getItem('bcotn-language')||'en');
