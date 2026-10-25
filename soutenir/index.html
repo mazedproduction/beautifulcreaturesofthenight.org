@@ -14,29 +14,34 @@
     <link rel="stylesheet" href="/mobile-fit-v11.css?v=27" />
     <link rel="stylesheet" href="/typography-v16.css" />
     <link rel="stylesheet" href="/nav-layout-v19.css?v=27" />
-  <link rel="stylesheet" href="/type-system-v28.css?v=28" /><link rel="stylesheet" href="/responsive-header-v30.css?v=30" /></head>
+  <link rel="stylesheet" href="/type-system-v28.css?v=28" /><link rel="stylesheet" href="/responsive-header-v30.css?v=30" /><link rel="stylesheet" href="/institutional-header-v33.css?v=33" /></head>
   <body>
     <header class="site-header">
-      <nav class="nav">
-        <a class="brand" href="/"
-          ><img
-            src="/bcotn-emblem-menu-v26.png"
-            alt="Beautiful Creatures Of The Night"
-        /></a>
-        <div class="links">
-          <a href="/mission/">Mission</a><a href="/programmes/">Programmes</a
-          ><a href="/projects/">Projets</a
-          ><a href="/association/">Qui nous sommes</a
-          ><a class="donate" aria-current="page" href="/soutenir/">Soutenir</a>
+      <div class="header-shell">
+        <div class="header-top">
+          <div class="header-actions">
+            <a class="donate header-support" href="/soutenir/">Soutenir</a>
+            <div class="language-mount"></div>
+          </div>
         </div>
-        <button class="menu-button">MENU</button>
-      </nav>
+        <div class="header-identity">
+          <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+          <a class="brand" href="/" aria-label="Beautiful Creatures Of The Night"><img src="/bcotn-emblem-menu-v26.png" alt="Beautiful Creatures Of The Night"></a>
+        </div>
+        <nav class="links" aria-label="Navigation principale">
+          <a href="/mission/">Mission</a>
+          <a href="/programmes/">Programmes</a>
+          <a href="/projects/">Projets</a>
+          <a href="/association/">Qui nous sommes</a>
+        </nav>
+      </div>
     </header>
-    <nav class="mobile-panel">
-      <a href="/mission/">Mission</a><a href="/programmes/">Programmes</a
-      ><a href="/projects/">Projets</a
-      ><a href="/association/">Qui nous sommes</a
-      ><a href="/soutenir/">Soutenir</a>
+    <nav class="mobile-panel" id="mobile-menu" aria-label="Navigation mobile">
+      <a href="/mission/">Mission</a>
+      <a href="/programmes/">Programmes</a>
+      <a href="/projects/">Projets</a>
+      <a href="/association/">Qui nous sommes</a>
+      <a class="mobile-support" href="/soutenir/">Soutenir</a>
     </nav>
     <main>
       <section class="page-hero">
@@ -145,6 +150,6 @@
       </div>
       <div class="legal">© 2026 BCOTN</div>
     </footer>
-    <script src="/script.js?v=31"></script>
+    <script src="/script.js?v=33"></script>
   </body>
 </html>
