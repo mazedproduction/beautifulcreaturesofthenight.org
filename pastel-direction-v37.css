@@ -56,13 +56,13 @@ body{color:#342b59;background:#fffaf7;overflow-x:hidden}
 .intro-composition{
   position:relative;
   z-index:2;
-  width:min(1180px,90vw);
+  width:min(1240px,93vw);
   min-height:calc(100svh - 130px);
   display:grid;
-  grid-template-columns:minmax(280px,.8fr) minmax(460px,1.2fr);
+  grid-template-columns:minmax(280px,.68fr) minmax(540px,1.32fr);
   align-items:center;
   justify-content:center;
-  gap:clamp(22px,5vw,86px);
+  gap:clamp(22px,3.5vw,62px);
   padding:40px 0 80px;
 }
 .intro-torso{
@@ -83,7 +83,7 @@ body{color:#342b59;background:#fffaf7;overflow-x:hidden}
   position:relative;
   left:auto;
   top:auto;
-  width:min(610px,100%);
+  width:min(740px,100%);
   height:auto;
   opacity:1;
   transform:none;
@@ -131,11 +131,12 @@ body{color:#342b59;background:#fffaf7;overflow-x:hidden}
 .lang-menu button{color:#342b59!important}
 .header-identity,.site-header.is-compact .header-identity{justify-content:flex-start!important;align-items:flex-end!important}
 .brand,.site-header.is-compact .brand{
-  width:clamp(260px,25vw,360px)!important;
-  max-width:36vw!important;
+  width:clamp(330px,30vw,440px)!important;
+  max-width:42vw!important;
   margin-top:13px!important;
   align-items:flex-start!important;
 }
+.brand img,.site-header.is-compact .brand img{aspect-ratio:417.57999 / 60.985176!important}
 .brand:after,.site-header.is-compact .brand:after{display:none!important}
 .links,.site-header.is-compact .links{
   left:auto!important;
