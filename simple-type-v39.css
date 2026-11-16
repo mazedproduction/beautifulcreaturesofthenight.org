@@ -1,0 +1,25 @@
+:root{
+  --display:"Helvetica Neue",Arial,sans-serif;
+  --body:"Helvetica Neue",Arial,sans-serif;
+}
+
+html,body,button,input,textarea,select{font-family:"Helvetica Neue",Arial,sans-serif!important}
+body{font-weight:400}
+
+p,a,button,li,label,input,textarea,select,
+.links a,.header-support,.lang-toggle,.mobile-panel a,.mobile-support,
+.kicker,.num,.intro,.body-copy,.text-link,.legal,.fact,.project-copy{
+  font-family:"Helvetica Neue",Arial,sans-serif!important;
+  font-weight:400!important;
+}
+
+h1,h2,h3,h4,h5,h6,
+.section-title,.page-title,.project-title,.footer h3,
+.card h2,.card h3,.cta h2{
+  font-family:"Helvetica Neue",Arial,sans-serif!important;
+  font-weight:700!important;
+  font-style:normal!important;
+}
+
+h1 *,h2 *,h3 *,h4 *,h5 *,h6 *{font-weight:700!important}
+strong,b{font-family:"Helvetica Neue",Arial,sans-serif!important;font-weight:700!important}
