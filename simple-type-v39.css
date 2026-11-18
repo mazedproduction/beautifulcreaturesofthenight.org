@@ -54,7 +54,29 @@ h1 *,h2 *,h3 *,h4 *,h5 *,h6 *{
 
 strong,b{font-family:"Helvetica Neue",Arial,sans-serif!important;font-weight:700!important}
 
+/* Keep programme cards inside their content column at every breakpoint. */
+.page-programmes .grid{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  min-width:0!important;
+}
+
+.page-programmes .card,
+.page-programmes .card > *{
+  min-width:0!important;
+  max-width:100%!important;
+}
+
+@media(max-width:980px){
+  .page-programmes .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
 @media(max-width:680px){
+  .page-programmes .grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+
   h1,.page-title,.page-hero h1,.hero h1,.profile-copy h1{
     width:100%;
     font-size:clamp(2.15rem,10vw,3.35rem)!important;
