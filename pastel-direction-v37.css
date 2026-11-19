@@ -716,3 +716,43 @@ body.page-home{
   border:0!important;
   box-shadow:none!important;
 }
+
+
+/* v59 — restrained pink bridge and readable type over the light field */
+body.page-home{
+  background-image:
+    radial-gradient(ellipse 112% 132% at -10% -28%,
+      #17112f 0%,
+      #211a3f 39%,
+      #3f315f 51%,
+      #79649a 58%,
+      #d77ab5 62%,
+      #efb5d7 64%,
+      #eadcf3 68%,
+      #fff8f2 75%,
+      #fff8f2 100%),
+    linear-gradient(180deg,
+      #fff8f2 0%,
+      #fff8f2 34%,
+      #f4e5f0 52%,
+      #d8c8f2 72%,
+      #b9d2f1 87%,
+      #95bceb 100%)!important;
+}
+.page-home .hero h1{
+  color:transparent!important;
+  background:linear-gradient(132deg,#fff8f2 0%,#fff8f2 42%,#211a3f 72%,#211a3f 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  text-shadow:none!important;
+}
+.page-home .hero p{color:#211a3f!important}
+.page-home .hero .button{
+  background:#211a3f!important;
+  color:#fff8f2!important;
+}
+.page-home .hero .button.secondary{
+  background:rgba(255,248,242,.42)!important;
+  color:#211a3f!important;
+  border-color:rgba(33,26,63,.42)!important;
+}
