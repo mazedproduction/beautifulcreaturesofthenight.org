@@ -324,3 +324,7 @@ body.page-home{
 .page-home .hero{
   background:transparent!important;
 }
+
+
+/* v46 — remove pseudo seam */
+.page-home .hero::before,.page-home .hero::after{display:none!important}
