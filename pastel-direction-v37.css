@@ -197,3 +197,43 @@ body{color:#211a3f;background:#fff8f2;overflow-x:hidden}
   .site-intro::before,.intro-moon,.intro-official-logo,.intro-arrow::before{animation:none!important}
 }
 
+
+
+/* v43 — direct-entry colour flow */
+.page-home .site-intro{display:none!important}
+
+.site-header,.site-header.is-compact{
+  background:rgba(255,248,242,.94)!important;
+  color:#211a3f!important;
+}
+.brand img,.site-header.is-compact .brand img{
+  filter:brightness(0) saturate(100%) invert(14%) sepia(20%) saturate(1930%) hue-rotate(211deg) brightness(92%) contrast(98%)!important;
+}
+.links a,.site-header.is-compact .links a,
+.header-support,.lang-toggle,.menu-button{
+  color:#211a3f!important;
+}
+
+.page-home .hero{
+  background:
+    radial-gradient(circle at 12% 42%,rgba(33,26,63,.20),transparent 34%),
+    radial-gradient(circle at 88% 28%,rgba(247,107,176,.34),transparent 40%),
+    linear-gradient(110deg,#7f9ed7 0%,#95bceb 28%,#d8c8f2 65%,#fff8f2 100%)!important;
+  color:#211a3f!important;
+}
+.page-home .hero::after{opacity:.28!important}
+.page-home .section.alt{background:#d8c8f2!important}
+.page-home .section:not(.alt){background:#fff8f2!important}
+.page-home .card{
+  background:rgba(255,248,242,.84)!important;
+  border-color:rgba(33,26,63,.14)!important;
+  color:#211a3f!important;
+}
+.page-home .cta{
+  background:#95bceb!important;
+  color:#211a3f!important;
+}
+.page-home .footer{
+  background:#211a3f!important;
+  color:#fff8f2!important;
+}
