@@ -854,3 +854,36 @@ body.page-home{
   border:0!important;
   box-shadow:none!important;
 }
+
+
+/* v64 — restore a visible but diffused pastel-pink atmosphere */
+body.page-home{
+  background:
+    radial-gradient(ellipse 1120px 880px at -4% -2%,
+      #17112f 0%,
+      #211a3f 27%,
+      rgba(62,48,88,.94) 46%,
+      rgba(111,83,126,.68) 63%,
+      rgba(189,129,174,.30) 79%,
+      transparent 100%),
+    radial-gradient(ellipse 1120px 820px at 62% 12%,
+      rgba(239,143,202,.43) 0%,
+      rgba(232,166,210,.30) 38%,
+      rgba(226,190,220,.16) 64%,
+      transparent 88%),
+    radial-gradient(ellipse 900px 760px at 18% 43%,
+      rgba(230,155,204,.20) 0%,
+      transparent 82%),
+    radial-gradient(ellipse 1100px 900px at 90% 90%,
+      rgba(149,188,235,.58) 0%,
+      rgba(183,207,240,.34) 48%,
+      transparent 88%),
+    linear-gradient(180deg,
+      #e9e1f7 0%,
+      #e5dcf5 18%,
+      #ddd2f2 36%,
+      #e4d5ee 53%,
+      #d4d4f1 69%,
+      #b9d2f1 85%,
+      #95bceb 100%)!important;
+}
