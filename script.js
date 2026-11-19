@@ -33,7 +33,7 @@ mobilePanel?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set
 document.addEventListener('keydown',e=>{if(e.key==='Escape')setMobileMenu(false)});
 mobileQuery.addEventListener?.('change',e=>{if(!e.matches)setMobileMenu(false)});
 const picker=document.createElement('div');picker.className='language';picker.innerHTML='<button class="lang-toggle" aria-label="Change language" aria-expanded="false">EN</button><div class="lang-menu"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="es">ES</button></div>';document.querySelector('.language-mount')?.appendChild(picker);
-document.querySelector('.header-actions')?.appendChild(menuButton);
+document.querySelector('.header-actions')?.insertBefore(menuButton,document.querySelector('.language-mount'));
 remember();
 const languageToggle=picker.querySelector('.lang-toggle'),languageMenu=picker.querySelector('.lang-menu');
 languageToggle.addEventListener('click',e=>{e.stopPropagation();const open=!languageMenu.classList.contains('open');languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))});
