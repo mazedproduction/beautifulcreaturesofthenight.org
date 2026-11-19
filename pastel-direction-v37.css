@@ -493,3 +493,7 @@ body.menu-open{overflow:hidden!important}
   .footer-logo img{width:min(360px,88vw)!important}
   .footer-legal-links{flex-direction:column;gap:12px}
 }
+
+
+/* v51 — white header wordmark */
+.brand img,.site-header.is-compact .brand img{filter:brightness(0) invert(1)!important}
