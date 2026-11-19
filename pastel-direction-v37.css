@@ -521,3 +521,7 @@ body.menu-open{overflow:hidden!important}
 @media(max-width:980px){
   .mobile-panel .mobile-support{font-size:clamp(32px,10vw,54px)!important}
 }
+
+
+/* v53 — uniform menu weight */
+.mobile-panel .mobile-support{font-weight:400!important}
