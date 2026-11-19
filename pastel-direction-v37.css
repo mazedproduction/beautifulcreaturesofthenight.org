@@ -591,3 +591,8 @@ body:not(.page-home) .footer a,
 body:not(.page-home) .footer h3,
 body:not(.page-home) .footer .legal,
 body:not(.page-home) .footer-legal-links a{color:#211a3f!important}
+
+
+/* v55 — adaptive floating controls */
+.page-home>.header-actions{mix-blend-mode:difference!important}
+.page-home.menu-open>.header-actions{mix-blend-mode:normal!important}
