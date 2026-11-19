@@ -887,3 +887,50 @@ body.page-home{
       #b9d2f1 85%,
       #95bceb 100%)!important;
 }
+
+
+/* v65 — electric-pink curved transition + menu on the exact page canvas */
+body.page-home{
+  background:
+    radial-gradient(ellipse 1280px 930px at -8% -4%,
+      #17112f 0%,
+      #211a3f 30%,
+      rgba(61,47,86,.97) 46%,
+      rgba(105,76,119,.88) 59%,
+      rgba(174,93,151,.72) 68%,
+      rgba(247,107,176,.58) 75%,
+      rgba(247,107,176,.30) 82%,
+      rgba(232,174,215,.12) 88%,
+      transparent 96%),
+    radial-gradient(ellipse 1050px 780px at 74% 12%,
+      rgba(247,107,176,.28) 0%,
+      rgba(238,155,205,.18) 42%,
+      transparent 86%),
+    radial-gradient(ellipse 900px 760px at 18% 43%,
+      rgba(230,155,204,.16) 0%,
+      transparent 84%),
+    radial-gradient(ellipse 1100px 900px at 90% 90%,
+      rgba(149,188,235,.58) 0%,
+      rgba(183,207,240,.34) 48%,
+      transparent 88%),
+    linear-gradient(180deg,
+      #e9e1f7 0%,
+      #e5dcf5 18%,
+      #ddd2f2 36%,
+      #e4d5ee 53%,
+      #d4d4f1 69%,
+      #b9d2f1 85%,
+      #95bceb 100%)!important;
+}
+.page-home .mobile-panel,
+.page-home .mobile-panel.open{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+.page-home.menu-open main,
+.page-home.menu-open .footer{
+  visibility:hidden!important;
+}
