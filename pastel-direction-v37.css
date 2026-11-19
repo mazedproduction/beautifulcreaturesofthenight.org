@@ -1063,3 +1063,54 @@ body.page-home{
   background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat!important;
   background-blend-mode:overlay,normal,normal,normal,normal,normal,normal,normal,normal!important;
 }
+
+
+/* v69 — true dark-lavender field above/left of the approved curve */
+body.page-home{
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain69'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain69)' opacity='.72'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 2500px 1060px at -200px -150px,
+      #29224f 0%,
+      #342a5d 52%,
+      #49396f 62%,
+      rgba(91,69,119,.97) 68%,
+      rgba(140,75,137,.76) 71.5%,
+      rgba(255,54,168,.46) 74%,
+      rgba(247,107,176,.22) 77%,
+      rgba(238,158,207,.08) 80.5%,
+      transparent 86%),
+    radial-gradient(ellipse 420px 150px at 12% 57%,
+      rgba(255,54,168,.22) 0%,
+      rgba(247,107,176,.10) 46%,
+      transparent 78%),
+    radial-gradient(ellipse 560px 150px at 42% 48%,
+      rgba(255,54,168,.20) 0%,
+      rgba(247,107,176,.08) 50%,
+      transparent 80%),
+    radial-gradient(ellipse 520px 145px at 69% 34%,
+      rgba(255,54,168,.18) 0%,
+      rgba(247,107,176,.07) 50%,
+      transparent 82%),
+    radial-gradient(ellipse 430px 135px at 88% 20%,
+      rgba(255,54,168,.14) 0%,
+      rgba(247,107,176,.05) 52%,
+      transparent 82%),
+    radial-gradient(ellipse 820px 720px at 5% 62%,
+      rgba(79,61,112,.24) 0%,
+      transparent 84%),
+    radial-gradient(ellipse 1120px 920px at 92% 92%,
+      rgba(149,188,235,.66) 0%,
+      rgba(175,203,239,.38) 48%,
+      transparent 88%),
+    linear-gradient(180deg,
+      #eae4f8 0%,
+      #e6def6 18%,
+      #ddd2f2 37%,
+      #e5d5ee 54%,
+      #d4d4f1 69%,
+      #b9d2f1 85%,
+      #95bceb 100%)!important;
+  background-size:150px 150px,auto,auto,auto,auto,auto,auto,auto,auto!important;
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat!important;
+  background-blend-mode:overlay,normal,normal,normal,normal,normal,normal,normal,normal!important;
+}
