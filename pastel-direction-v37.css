@@ -596,3 +596,31 @@ body:not(.page-home) .footer-legal-links a{color:#211a3f!important}
 /* v55 — adaptive floating controls */
 .page-home>.header-actions{mix-blend-mode:difference!important}
 .page-home.menu-open>.header-actions{mix-blend-mode:normal!important}
+
+
+/* v56 — diagonal lavender light field */
+body.page-home{
+  background:
+    radial-gradient(ellipse 76% 30% at 100% 23%,
+      rgba(255,248,242,.96) 0%,
+      rgba(231,220,245,.88) 28%,
+      rgba(216,200,242,.56) 48%,
+      rgba(216,200,242,0) 76%),
+    radial-gradient(ellipse 48% 28% at 8% 7%,
+      rgba(16,12,37,.56) 0%,
+      rgba(33,26,63,.30) 48%,
+      transparent 78%),
+    radial-gradient(circle at 12% 42%,rgba(247,107,176,.13),transparent 25%),
+    radial-gradient(circle at 80% 73%,rgba(216,200,242,.34),transparent 29%),
+    linear-gradient(180deg,
+      #211a3f 0%,
+      #463a67 14%,
+      #7a6aa5 28%,
+      #d8c8f2 45%,
+      #fff8f2 66%,
+      #d8c8f2 82%,
+      #95bceb 100%)!important;
+}
+.page-home .hero h1{
+  text-shadow:0 2px 26px rgba(33,26,63,.16);
+}
