@@ -436,3 +436,7 @@ body.menu-open{overflow:hidden!important}
 @media(prefers-reduced-motion:reduce){
   .menu-button span{transition:none!important}
 }
+
+
+/* v48 — keep menu controls visible */
+.site-header,.site-header.is-compact{position:relative!important;z-index:120!important}
