@@ -525,3 +525,69 @@ body.menu-open{overflow:hidden!important}
 
 /* v53 — uniform menu weight */
 .mobile-panel .mobile-support{font-weight:400!important}
+
+
+/* v54 — inverted, seamless site colour journey */
+body.page-home{
+  background:
+    radial-gradient(circle at 84% 10%,rgba(216,200,242,.36),transparent 24%),
+    radial-gradient(circle at 12% 38%,rgba(247,107,176,.16),transparent 24%),
+    radial-gradient(circle at 80% 72%,rgba(216,200,242,.38),transparent 28%),
+    linear-gradient(180deg,
+      #211a3f 0%,
+      #463a67 14%,
+      #7a6aa5 28%,
+      #d8c8f2 45%,
+      #fff8f2 66%,
+      #d8c8f2 82%,
+      #95bceb 100%)!important;
+}
+.page-home .site-header,
+.page-home .site-header.is-compact,
+.page-home .hero,
+.page-home .section,
+.page-home .section.alt,
+.page-home .section:not(.alt),
+.page-home .cta,
+.page-home .footer{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.page-home .hero,
+.page-home .hero h1,
+.page-home .hero p{color:#fff8f2!important}
+.page-home .hero .button{background:#fff8f2!important;color:#211a3f!important}
+.page-home .hero .button.secondary{
+  background:transparent!important;
+  color:#fff8f2!important;
+  border-color:rgba(255,248,242,.65)!important;
+}
+.page-home .menu-button,
+.page-home .lang-toggle{color:#fff8f2!important;text-shadow:0 1px 10px rgba(33,26,63,.26)}
+.page-home .language-mount:before{background:rgba(255,248,242,.52)!important}
+.page-home .footer,
+.page-home .footer a,
+.page-home .footer .legal,
+.page-home .footer-legal-links a{color:#211a3f!important}
+.page-home .footer h3{color:#211a3f!important}
+.page-home .footer-legal-links a:hover,
+.page-home .footer-legal-links a:focus-visible{color:#fff8f2!important}
+.page-home .footer-logo img{filter:brightness(0) invert(1) drop-shadow(0 2px 14px rgba(33,26,63,.16))!important}
+
+/* Other pages follow the same direction without abrupt header/footer cuts. */
+body:not(.page-home) .site-header,
+body:not(.page-home) .site-header.is-compact{
+  background:linear-gradient(135deg,#211a3f 0%,#5f527f 58%,#d8c8f2 100%)!important;
+}
+body:not(.page-home) .page-hero{
+  background:linear-gradient(180deg,#d8c8f2 0%,#eee6f7 100%)!important;
+}
+body:not(.page-home) .footer{
+  background:linear-gradient(180deg,#d8c8f2 0%,#b8c9ee 44%,#95bceb 100%)!important;
+  color:#211a3f!important;
+}
+body:not(.page-home) .footer a,
+body:not(.page-home) .footer h3,
+body:not(.page-home) .footer .legal,
+body:not(.page-home) .footer-legal-links a{color:#211a3f!important}
