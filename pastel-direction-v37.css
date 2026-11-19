@@ -497,3 +497,27 @@ body.menu-open{overflow:hidden!important}
 
 /* v51 — white header wordmark */
 .brand img,.site-header.is-compact .brand img{filter:brightness(0) invert(1)!important}
+
+
+/* v52 — aligned overlay menu and final footer order */
+.mobile-panel .mobile-support{
+  margin:0!important;
+  padding:clamp(10px,1.5vh,18px) 0!important;
+  font-size:clamp(30px,5vw,72px)!important;
+  font-weight:700!important;
+  line-height:.98!important;
+  letter-spacing:-.035em!important;
+  text-transform:uppercase!important;
+}
+.footer-logo{margin-bottom:0!important}
+.footer-logo + .footer-legal-links{
+  margin-top:clamp(38px,5vw,64px)!important;
+  margin-bottom:18px!important;
+}
+.footer-legal-links + .legal{
+  margin-top:0!important;
+  padding-top:20px!important;
+}
+@media(max-width:980px){
+  .mobile-panel .mobile-support{font-size:clamp(32px,10vw,54px)!important}
+}
