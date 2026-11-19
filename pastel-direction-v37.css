@@ -934,3 +934,43 @@ body.page-home{
 .page-home.menu-open .footer{
   visibility:hidden!important;
 }
+
+
+/* v66 — electric-pink halo boundary, fine grain and atmospheric depth */
+body.page-home{
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.22'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 1320px 960px at -8% -4%,
+      #15102d 0%,
+      #211a3f 31%,
+      #3d3057 47%,
+      rgba(103,72,113,.96) 59%,
+      rgba(184,82,151,.86) 68%,
+      rgba(247,107,176,.92) 73%,
+      rgba(247,107,176,.64) 78%,
+      rgba(239,149,202,.38) 84%,
+      rgba(228,187,221,.14) 90%,
+      transparent 97%),
+    radial-gradient(ellipse 1120px 820px at 74% 13%,
+      rgba(247,107,176,.24) 0%,
+      rgba(237,157,205,.14) 48%,
+      transparent 88%),
+    radial-gradient(ellipse 850px 760px at 8% 58%,
+      rgba(71,53,103,.22) 0%,
+      transparent 82%),
+    radial-gradient(ellipse 1120px 920px at 92% 92%,
+      rgba(149,188,235,.66) 0%,
+      rgba(175,203,239,.38) 48%,
+      transparent 88%),
+    linear-gradient(180deg,
+      #eae4f8 0%,
+      #e6def6 18%,
+      #ddd2f2 37%,
+      #e5d5ee 54%,
+      #d4d4f1 69%,
+      #b9d2f1 85%,
+      #95bceb 100%)!important;
+  background-size:220px 220px,auto,auto,auto,auto,auto!important;
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat!important;
+  background-blend-mode:soft-light,normal,normal,normal,normal,normal!important;
+}
