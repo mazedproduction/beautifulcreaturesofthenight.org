@@ -974,3 +974,41 @@ body.page-home{
   background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat!important;
   background-blend-mode:soft-light,normal,normal,normal,normal,normal!important;
 }
+
+
+/* v67 — red-guide alignment: flatter rising halo, restrained pink, visible grain */
+body.page-home{
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.58'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 2500px 1060px at -200px -150px,
+      #15102d 0%,
+      #211a3f 52%,
+      rgba(58,45,82,.98) 61%,
+      rgba(91,65,107,.92) 67%,
+      rgba(163,82,142,.68) 71%,
+      rgba(247,107,176,.58) 74%,
+      rgba(247,107,176,.34) 78%,
+      rgba(231,166,210,.15) 83%,
+      transparent 90%),
+    radial-gradient(ellipse 880px 640px at 88% 16%,
+      rgba(247,107,176,.12) 0%,
+      transparent 84%),
+    radial-gradient(ellipse 820px 720px at 5% 62%,
+      rgba(65,49,96,.24) 0%,
+      transparent 84%),
+    radial-gradient(ellipse 1120px 920px at 92% 92%,
+      rgba(149,188,235,.66) 0%,
+      rgba(175,203,239,.38) 48%,
+      transparent 88%),
+    linear-gradient(180deg,
+      #eae4f8 0%,
+      #e6def6 18%,
+      #ddd2f2 37%,
+      #e5d5ee 54%,
+      #d4d4f1 69%,
+      #b9d2f1 85%,
+      #95bceb 100%)!important;
+  background-size:180px 180px,auto,auto,auto,auto,auto!important;
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat!important;
+  background-blend-mode:overlay,normal,normal,normal,normal,normal!important;
+}
