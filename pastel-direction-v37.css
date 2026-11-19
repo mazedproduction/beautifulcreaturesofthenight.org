@@ -624,3 +624,48 @@ body.page-home{
 .page-home .hero h1{
   text-shadow:0 2px 26px rgba(33,26,63,.16);
 }
+
+
+/* v57 — organic diagonal bloom: dark upper-left, luminous lower-right */
+body.page-home{
+  background:
+    radial-gradient(ellipse 92% 48% at 108% 20%,
+      rgba(255,248,242,.94) 0%,
+      rgba(238,224,247,.72) 31%,
+      rgba(216,200,242,.34) 56%,
+      transparent 82%),
+    radial-gradient(ellipse 58% 42% at 82% 40%,
+      rgba(255,88,181,.31) 0%,
+      rgba(247,107,176,.18) 34%,
+      transparent 72%),
+    radial-gradient(ellipse 72% 42% at 96% 96%,
+      rgba(149,188,235,.94) 0%,
+      rgba(181,207,241,.58) 38%,
+      transparent 78%),
+    radial-gradient(ellipse 64% 38% at 10% 5%,
+      rgba(14,10,32,.72) 0%,
+      rgba(33,26,63,.48) 46%,
+      transparent 84%),
+    linear-gradient(132deg,
+      #17112f 0%,
+      #211a3f 18%,
+      #40345f 34%,
+      #74639a 49%,
+      #aa96cd 62%,
+      #d8c8f2 75%,
+      #fff8f2 88%,
+      #b7d5f4 100%)!important;
+  background-attachment:scroll!important;
+}
+.page-home .site-header,
+.page-home .site-header.is-compact,
+.page-home .hero,
+.page-home .section,
+.page-home .section.alt,
+.page-home .section:not(.alt),
+.page-home .cta,
+.page-home .footer{
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+}
