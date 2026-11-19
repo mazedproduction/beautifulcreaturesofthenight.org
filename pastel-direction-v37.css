@@ -756,3 +756,15 @@ body.page-home{
   color:#211a3f!important;
   border-color:rgba(33,26,63,.42)!important;
 }
+
+
+/* v60 — crisp two-tone headline contrast across the curved light boundary */
+.page-home .hero h1{
+  background:linear-gradient(90deg,
+    #fff8f2 0%,
+    #fff8f2 35%,
+    #211a3f 43%,
+    #211a3f 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+}
