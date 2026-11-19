@@ -802,3 +802,10 @@ body.page-home{
     0 0 8px rgba(221,210,242,.72),
     0 0 28px rgba(221,210,242,.56)!important;
 }
+
+
+/* v62 — clean headline, no glow or light effect behind letters */
+.page-home .hero h1{
+  text-shadow:none!important;
+  filter:none!important;
+}
