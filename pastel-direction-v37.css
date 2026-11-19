@@ -669,3 +669,50 @@ body.page-home{
   background-image:none!important;
   border:0!important;
 }
+
+
+/* v58 — one seamless curved field, following the approved red guide */
+body.page-home{
+  background-image:
+    radial-gradient(ellipse 112% 132% at -10% -28%,
+      #17112f 0%,
+      #211a3f 38%,
+      #3f315f 50%,
+      #79649a 57%,
+      rgba(244,91,174,.88) 62%,
+      rgba(250,157,207,.72) 65%,
+      #eadcf3 69%,
+      #fff8f2 76%,
+      #fff8f2 100%),
+    linear-gradient(180deg,
+      #fff8f2 0%,
+      #fff8f2 34%,
+      #f4e5f0 52%,
+      #d8c8f2 72%,
+      #b9d2f1 87%,
+      #95bceb 100%)!important;
+  background-size:100% 100svh,100% 100%!important;
+  background-position:top left,top left!important;
+  background-repeat:no-repeat,no-repeat!important;
+  background-attachment:scroll,scroll!important;
+}
+.page-home .site-header,
+.page-home .site-header.is-compact{
+  background:transparent!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.page-home .hero,
+.page-home .hero::before,
+.page-home .hero::after,
+.page-home .section,
+.page-home .section.alt,
+.page-home .section:not(.alt),
+.page-home .cta,
+.page-home .footer{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
