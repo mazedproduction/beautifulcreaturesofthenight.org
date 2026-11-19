@@ -768,3 +768,37 @@ body.page-home{
   -webkit-background-clip:text!important;
   background-clip:text!important;
 }
+
+
+/* v61 — no white: extended lavender-pink-lavender transition */
+body.page-home{
+  background-image:
+    radial-gradient(ellipse 118% 142% at -12% -34%,
+      #17112f 0%,
+      #211a3f 34%,
+      #30264c 43%,
+      #51406f 52%,
+      #796094 60%,
+      #a979a9 67%,
+      #cf8fbd 73%,
+      #e1afd2 79%,
+      #e4c8e7 86%,
+      #ddd2f2 93%,
+      #d8c8f2 100%),
+    linear-gradient(180deg,
+      #d8c8f2 0%,
+      #e4c8e7 28%,
+      #d8c8f2 50%,
+      #c7c9ee 72%,
+      #adc9ef 88%,
+      #95bceb 100%)!important;
+}
+.page-home .hero h1{
+  color:#211a3f!important;
+  background:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  text-shadow:
+    0 0 8px rgba(221,210,242,.72),
+    0 0 28px rgba(221,210,242,.56)!important;
+}
