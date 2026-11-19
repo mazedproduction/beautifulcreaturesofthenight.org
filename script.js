@@ -27,12 +27,13 @@ const originalTitle=document.title;
 const source=new Map();function remember(){const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const s=n.nodeValue.trim().replace(/\s+/g,' ');if(s&&n.parentElement&&!n.parentElement.closest('script,style,.lang-menu,.lang-toggle'))source.set(n,s)}}
 function setLanguage(lang){if(!['en','fr','es'].includes(lang))lang='en';const d=lang==='en'?en:lang==='es'?es:fr;document.documentElement.lang=lang;source.forEach((s,n)=>{n.nodeValue=n.nodeValue.replace(n.nodeValue.trim(),d[s]||s)});document.title=pageTitles[lang]?.[originalTitle]||originalTitle;const toggle=document.querySelector('.lang-toggle');toggle.textContent=lang.toUpperCase();toggle.setAttribute('aria-label',lang==='fr'?'Changer de langue':lang==='es'?'Cambiar idioma':'Change language');toggle.setAttribute('aria-expanded','false');document.querySelectorAll('.lang-menu button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('bcotn-language',lang);document.querySelector('.lang-menu').classList.remove('open')}
 const mobilePanel=document.querySelector('.mobile-panel'),menuButton=document.querySelector('.menu-button'),mobileQuery=window.matchMedia('(max-width:980px)');
-function setMobileMenu(open){mobilePanel?.classList.toggle('open',open);menuButton?.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open&&mobileQuery.matches)}
+function setMobileMenu(open){mobilePanel?.classList.toggle('open',open);menuButton?.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)}
 menuButton?.addEventListener('click',()=>setMobileMenu(!mobilePanel?.classList.contains('open')));
 mobilePanel?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMobileMenu(false)));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')setMobileMenu(false)});
 mobileQuery.addEventListener?.('change',e=>{if(!e.matches)setMobileMenu(false)});
 const picker=document.createElement('div');picker.className='language';picker.innerHTML='<button class="lang-toggle" aria-label="Change language" aria-expanded="false">EN</button><div class="lang-menu"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="es">ES</button></div>';document.querySelector('.language-mount')?.appendChild(picker);
+document.querySelector('.header-actions')?.appendChild(menuButton);
 remember();
 const languageToggle=picker.querySelector('.lang-toggle'),languageMenu=picker.querySelector('.lang-menu');
 languageToggle.addEventListener('click',e=>{e.stopPropagation();const open=!languageMenu.classList.contains('open');languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))});
