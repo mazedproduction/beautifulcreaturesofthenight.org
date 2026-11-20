@@ -1151,14 +1151,14 @@ body.page-home{
   height:190px;
   pointer-events:none;
   background:#211a3f;
-  -webkit-mask-image:radial-gradient(ellipse 105% 115% at 100% 0,
+  -webkit-mask-image:radial-gradient(ellipse 120% 80% at 100% 0,
     #000 0%,
     #000 38%,
     rgba(0,0,0,.82) 54%,
     rgba(0,0,0,.40) 70%,
     rgba(0,0,0,.12) 84%,
     transparent 100%);
-  mask-image:radial-gradient(ellipse 105% 115% at 100% 0,
+  mask-image:radial-gradient(ellipse 120% 80% at 100% 0,
     #000 0%,
     #000 38%,
     rgba(0,0,0,.82) 54%,
