@@ -473,3 +473,35 @@ body:has(.body-copy) .body-copy li{max-width:72ch}
     scroll-behavior:auto!important;
   }
 }
+
+
+/* v85 — verified contrast and long-title fit */
+.hero h1,
+.page-hero h1{
+  max-width:20ch!important;
+  font-size:clamp(3.2rem,6.25vw,6.9rem)!important;
+}
+body:not(.page-home) .page-hero,
+body:not(.page-home) .page-hero h1,
+body:not(.page-home) .page-hero p{
+  color:var(--bc-cream)!important;
+}
+body:not(.page-home) .page-hero .kicker{color:var(--bc-blue)!important}
+body:not(.page-home) .menu-button,
+body:not(.page-home) .lang-toggle,
+body:not(.page-home) .header-support{color:var(--bc-cream)!important}
+.team-card,
+.team-card h3,
+.team-card .team-role,
+.team-card .team-open,
+.team-card .team-monogram{color:var(--bc-ink)!important}
+.team-photo-placeholder{background:rgba(216,200,242,.30)!important}
+@media(max-width:700px){
+  .hero h1,.page-hero h1{
+    max-width:100%!important;
+    font-size:clamp(2.45rem,12.5vw,4.35rem)!important;
+  }
+}
+@media(max-width:390px){
+  .hero h1,.page-hero h1{font-size:clamp(2.2rem,11.9vw,3.15rem)!important}
+}
