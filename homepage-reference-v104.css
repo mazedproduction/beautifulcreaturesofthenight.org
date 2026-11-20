@@ -173,3 +173,26 @@
   }
   .page-home .home-hero-visual::before{inset:15% 0 6% -70%!important}
 }
+
+/* v105 — compact editorial proportions and clear header */
+@media(min-width:981px){
+  .page-home .home-hero{
+    min-height:clamp(420px,60svh,640px)!important;
+    height:clamp(420px,60svh,640px)!important;
+    grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr)!important;
+    padding:12px 2.5% 18px!important;
+  }
+  .page-home .home-hero h1{
+    max-width:100%!important;
+    font-size:clamp(2.4rem,3.65vw,4.35rem)!important;
+    line-height:.94!important;
+    letter-spacing:-.045em!important;
+  }
+  .page-home .home-hero-visual{
+    height:min(55svh,560px)!important;
+  }
+  .page-home .home-hero-visual::before{inset:18% -4% 8% -22%!important}
+  .page-home .home-hero p{max-width:48ch!important;margin-top:16px!important}
+  .page-home .home-hero .hero-actions{margin-top:18px!important}
+  body.page-home > .header-actions{display:none!important}
+}
