@@ -523,3 +523,33 @@ body:not(.page-home){
     color:var(--bc-paper-ink)!important;
   }
 }
+
+
+/* v96 — keep script-mounted Support and language controls inside the header line */
+@media(min-width:981px){
+  .header-shell,
+  .site-header.is-compact .header-shell{
+    grid-template-columns:minmax(260px,360px) 1fr!important;
+  }
+  .header-top,
+  .site-header.is-compact .header-top{display:none!important}
+  .links,
+  .site-header.is-compact .links{
+    justify-content:center!important;
+    padding-right:clamp(120px,11vw,168px)!important;
+  }
+  body > .header-actions{
+    position:absolute!important;
+    z-index:140!important;
+    top:28px!important;
+    right:4vw!important;
+    bottom:auto!important;
+    left:auto!important;
+    width:auto!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:12px!important;
+    color:var(--bc-paper-ink)!important;
+    mix-blend-mode:normal!important;
+  }
+}
