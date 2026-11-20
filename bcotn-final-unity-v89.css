@@ -1,0 +1,74 @@
+/* BCOTN final page-unity override — loaded last */
+html{background:#211a3f!important}
+body:not(.page-home) > main,
+body:not(.page-home) main,
+body:not(.page-home) main > section,
+body:not(.page-home) .site-header,
+body:not(.page-home) .site-header.is-compact,
+body:not(.page-home) .hero,
+body:not(.page-home) .page-hero,
+body:not(.page-home) .profile-hero,
+body:not(.page-home) .section,
+body:not(.page-home) .section.alt,
+body:not(.page-home) .section.pink,
+body:not(.page-home) .section.night,
+body:not(.page-home) .cta,
+body:not(.page-home) .definition-book,
+body:not(.page-home) .footer{
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body:not(.page-home) main::before,
+body:not(.page-home) main::after,
+body:not(.page-home) main > section::before,
+body:not(.page-home) main > section::after{
+  content:none!important;
+  display:none!important;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .hero h1,
+body .page-hero h1,
+body .profile-copy h1,
+body .section-title,
+body .section h2,
+body .section h3,
+body .card h2,
+body .card h3,
+body .project-copy h2,
+body .project-copy h3,
+body .team-card h3,
+body .definition-entry h2,
+body .cta h2,
+body .footer h3{
+  color:#211a3f!important;
+  -webkit-text-fill-color:#211a3f!important;
+  background:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+}
+body:not(.page-home) .page-hero,
+body:not(.page-home) .page-hero .kicker,
+body:not(.page-home) .page-hero h1,
+body:not(.page-home) .page-hero p,
+body:not(.page-home) .profile-hero,
+body:not(.page-home) .profile-hero h1,
+body:not(.page-home) .profile-hero p{
+  color:#211a3f!important;
+  -webkit-text-fill-color:#211a3f!important;
+}
+body:not(.page-home) .night,
+body:not(.page-home) .night .wrap,
+body:not(.page-home) .night .card{
+  color:#211a3f!important;
+}
+body:not(.page-home) .night .card{
+  background:rgba(235,227,247,.26)!important;
+  border-color:rgba(33,26,63,.16)!important;
+}
