@@ -196,3 +196,43 @@
   .page-home .home-hero .hero-actions{margin-top:18px!important}
   body.page-home > .header-actions{display:none!important}
 }
+
+/* v106 — keep the full statue beside the mobile title in the first viewport */
+@media(max-width:600px){
+  .page-home .home-hero{
+    position:relative!important;
+    display:block!important;
+    min-height:calc(100svh - 70px)!important;
+    height:auto!important;
+    padding:18px 0 20px!important;
+    overflow:visible!important;
+  }
+  .page-home .home-hero .hero-inner{position:relative!important;z-index:2!important}
+  .page-home .home-hero h1{
+    box-sizing:content-box!important;
+    width:56%!important;
+    max-width:56%!important;
+    min-height:min(40svh,320px)!important;
+    font-size:clamp(1.22rem,5.2vw,2rem)!important;
+    line-height:1.02!important;
+    overflow-wrap:normal!important;
+  }
+  .page-home .home-hero h1::after{width:70%;margin-left:12%!important;height:3px!important}
+  .page-home .home-hero-visual{
+    position:absolute!important;
+    top:18px!important;right:0!important;
+    width:43%!important;
+    height:min(40svh,320px)!important;
+    margin:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .page-home .home-hero-visual img{
+    max-width:100%!important;
+    max-height:100%!important;
+    width:auto!important;height:auto!important;
+  }
+  .page-home .home-hero-visual::before{inset:18% -2% 8% -55%!important}
+  .page-home .home-hero p{max-width:100%!important;margin-top:14px!important;font-size:1rem!important}
+}
