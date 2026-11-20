@@ -905,3 +905,15 @@ body > .header-actions .header-support{
   .page-home main{width:calc(100vw - 40px)!important}
   .page-home .home-hero h1{font-size:clamp(2.75rem,13vw,4.1rem)!important}
 }
+
+
+/* v100 — final desktop header spacing */
+@media(min-width:981px){
+  .links,
+  .site-header.is-compact .links{
+    gap:clamp(20px,1.9vw,34px)!important;
+    padding-right:clamp(250px,19vw,292px)!important;
+  }
+  .links a,
+  .site-header.is-compact .links a{font-size:12px!important}
+}
