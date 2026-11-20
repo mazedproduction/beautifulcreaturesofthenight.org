@@ -1140,3 +1140,24 @@ body.page-home{
 }
 
 
+
+
+/* v82 — persistent edgeless lavender-dark atmosphere behind menu and language */
+.page-home .site-header::after{
+  content:"";
+  position:fixed;
+  z-index:130;
+  top:0;
+  right:0;
+  width:clamp(280px,28vw,410px);
+  height:100svh;
+  pointer-events:none;
+  background:radial-gradient(ellipse 330px 210px at 100% 0,
+    rgba(33,26,63,1) 0%,
+    rgba(33,26,63,.94) 36%,
+    rgba(45,35,76,.62) 58%,
+    rgba(60,45,91,.22) 76%,
+    rgba(60,45,91,0) 100%);
+}
+.page-home .menu-button,
+.page-home .header-actions{z-index:142!important}
