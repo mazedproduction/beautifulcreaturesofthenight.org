@@ -1120,7 +1120,7 @@ body.page-home{
 body.page-home{
   background-image:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain70'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain70)' opacity='.72'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 700' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='dark' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2315102d'/%3E%3Cstop offset='.62' stop-color='%23211a3f'/%3E%3Cstop offset='1' stop-color='%23483a68'/%3E%3C/linearGradient%3E%3Cfilter id='edgeBlur' x='-10%25' y='-20%25' width='120%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='18'/%3E%3C/filter%3E%3Cfilter id='pinkHalo' x='-30%25' y='-100%25' width='160%25' height='300%25'%3E%3CfeGaussianBlur stdDeviation='22'/%3E%3C/filter%3E%3Cfilter id='pinkCore' x='-30%25' y='-100%25' width='160%25' height='300%25'%3E%3CfeGaussianBlur stdDeviation='9'/%3E%3C/filter%3E%3Cmask id='softMask' maskUnits='userSpaceOnUse' x='-140' y='-140' width='1280' height='980'%3E%3Cpath d='M-120 390 C-72 356 -34 333 0 322 C45 268 92 247 151 230 C226 207 273 187 330 198 C398 211 460 209 515 205 C620 198 692 169 757 116 C814 69 870 28 920 39 C968 48 1022 82 1080 130 L1080 -120 L0 -120 Z' fill='white' filter='url(%23edgeBlur)'/%3E%3C/mask%3E%3C/defs%3E%3Crect x='0' y='0' width='1000' height='700' fill='url(%23dark)' mask='url(%23softMask)'/%3E%3Cpath d='M0 322 C45 268 92 247 151 230 C226 207 273 187 330 198 C398 211 460 209 515 205 C620 198 692 169 757 116 C814 69 870 28 920 39 C968 48 1022 82 1080 130' fill='none' stroke='%23ff36a8' stroke-opacity='.30' stroke-width='44' filter='url(%23pinkHalo)'/%3E%3Cpath d='M0 322 C45 268 92 247 151 230 C226 207 273 187 330 198 C398 211 460 209 515 205 C620 198 692 169 757 116 C814 69 870 28 920 39 C968 48 1022 82 1080 130' fill='none' stroke='%23f76bb0' stroke-opacity='.22' stroke-width='16' filter='url(%23pinkCore)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 700' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='dark' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2315102d'/%3E%3Cstop offset='.62' stop-color='%23211a3f'/%3E%3Cstop offset='1' stop-color='%23483a68'/%3E%3C/linearGradient%3E%3Cfilter id='edgeBlur' x='-10%25' y='-20%25' width='120%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='18'/%3E%3C/filter%3E%3Cfilter id='pinkHalo' x='-30%25' y='-100%25' width='160%25' height='300%25'%3E%3CfeGaussianBlur stdDeviation='22'/%3E%3C/filter%3E%3Cfilter id='pinkCore' x='-30%25' y='-100%25' width='160%25' height='300%25'%3E%3CfeGaussianBlur stdDeviation='9'/%3E%3C/filter%3E%3Cmask id='softMask' maskUnits='userSpaceOnUse' x='-140' y='-140' width='1280' height='980'%3E%3Cpath d='M-120 390 C-72 356 -34 333 0 322 C45 268 92 247 151 230 C226 207 273 187 330 198 C398 211 460 209 515 205 C620 198 692 169 757 116 C810 72 846 22 888 -18 C936 -58 1008 -72 1080 -84 L1080 -120 L0 -120 Z' fill='white' filter='url(%23edgeBlur)'/%3E%3C/mask%3E%3C/defs%3E%3Crect x='0' y='0' width='1000' height='700' fill='url(%23dark)' mask='url(%23softMask)'/%3E%3Cpath d='M0 322 C45 268 92 247 151 230 C226 207 273 187 330 198 C398 211 460 209 515 205 C620 198 692 169 757 116 C810 72 846 22 888 -18 C936 -58 1008 -72 1080 -84' fill='none' stroke='%23ff36a8' stroke-opacity='.30' stroke-width='44' filter='url(%23pinkHalo)'/%3E%3Cpath d='M0 322 C45 268 92 247 151 230 C226 207 273 187 330 198 C398 211 460 209 515 205 C620 198 692 169 757 116 C810 72 846 22 888 -18 C936 -58 1008 -72 1080 -84' fill='none' stroke='%23f76bb0' stroke-opacity='.22' stroke-width='16' filter='url(%23pinkCore)'/%3E%3C/svg%3E"),
     radial-gradient(ellipse 1120px 920px at 92% 92%,
       rgba(149,188,235,.66) 0%,
       rgba(175,203,239,.38) 48%,
@@ -1142,22 +1142,3 @@ body.page-home{
 
 
 
-/* v82 — persistent edgeless lavender-dark atmosphere behind menu and language */
-.page-home .site-header::after{
-  content:"";
-  position:fixed;
-  z-index:130;
-  top:0;
-  right:0;
-  width:clamp(280px,28vw,410px);
-  height:100svh;
-  pointer-events:none;
-  background:radial-gradient(ellipse 330px 210px at 100% 0,
-    rgba(33,26,63,1) 0%,
-    rgba(33,26,63,.94) 36%,
-    rgba(45,35,76,.62) 58%,
-    rgba(60,45,91,.22) 76%,
-    rgba(60,45,91,0) 100%);
-}
-.page-home .menu-button,
-.page-home .header-actions{z-index:142!important}
