@@ -118,3 +118,15 @@ body:not(.page-home) .gallery::after{
   border:0!important;
   box-shadow:none!important;
 }
+
+
+/* v91 — remove the final computed full-width bands */
+body:not(.page-home) .project-row,
+body:not(.page-home) .definition-grid,
+body:not(.page-home) .contact-box{
+  background-color:transparent!important;
+  background-image:none!important;
+  border-top:0!important;
+  border-bottom:0!important;
+  box-shadow:none!important;
+}
