@@ -543,3 +543,83 @@ body:not(.page-home){
   background-attachment:scroll,scroll,scroll,scroll!important;
   background-blend-mode:overlay,normal,normal,normal!important;
 }
+
+
+/* v88 — seamless homepage canvas and one lavender-dark title colour everywhere */
+html{
+  background:#211a3f!important;
+}
+body:not(.page-home) > main,
+body:not(.page-home) main,
+body:not(.page-home) main > *,
+body:not(.page-home) .site-header,
+body:not(.page-home) .site-header.is-compact,
+body:not(.page-home) .hero,
+body:not(.page-home) .page-hero,
+body:not(.page-home) .profile-hero,
+body:not(.page-home) .section,
+body:not(.page-home) .section.alt,
+body:not(.page-home) .section.pink,
+body:not(.page-home) .section.night,
+body:not(.page-home) .cta,
+body:not(.page-home) .definition-book,
+body:not(.page-home) .footer{
+  background-color:transparent!important;
+  background-image:none!important;
+  border-top:0!important;
+  border-bottom:0!important;
+  box-shadow:none!important;
+}
+body:not(.page-home) main::before,
+body:not(.page-home) main::after,
+body:not(.page-home) .hero::before,
+body:not(.page-home) .hero::after,
+body:not(.page-home) .page-hero::before,
+body:not(.page-home) .page-hero::after,
+body:not(.page-home) .profile-hero::before,
+body:not(.page-home) .profile-hero::after,
+body:not(.page-home) .section::before,
+body:not(.page-home) .section::after,
+body:not(.page-home) .cta::before,
+body:not(.page-home) .cta::after,
+body:not(.page-home) .footer::before,
+body:not(.page-home) .footer::after{
+  display:none!important;
+  content:none!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+h1,h2,h3,h4,h5,h6,
+.hero h1,
+.page-hero h1,
+.profile-copy h1,
+.section-title,
+.section h2,
+.section h3,
+.card h2,
+.card h3,
+.project-copy h2,
+.project-copy h3,
+.team-card h3,
+.definition-entry h2,
+.cta h2,
+.footer h3{
+  color:#211a3f!important;
+  -webkit-text-fill-color:#211a3f!important;
+  background:none!important;
+  text-shadow:none!important;
+  filter:none!important;
+}
+body:not(.page-home) .page-hero,
+body:not(.page-home) .page-hero h1,
+body:not(.page-home) .page-hero p,
+body:not(.page-home) .night,
+body:not(.page-home) .night .wrap{
+  color:#211a3f!important;
+}
+body:not(.page-home) .night .card{
+  color:#211a3f!important;
+  background:rgba(235,227,247,.26)!important;
+  border-color:rgba(33,26,63,.16)!important;
+}
