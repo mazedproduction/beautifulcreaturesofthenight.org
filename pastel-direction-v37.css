@@ -1138,3 +1138,26 @@ body.page-home{
   background-repeat:repeat,no-repeat,no-repeat,no-repeat!important;
   background-blend-mode:overlay,normal,normal,normal!important;
 }
+
+
+/* v76 — seamless canvas and permanent dark-lavender field behind navigation controls */
+.page-home .site-header::after{
+  content:"";
+  position:fixed;
+  z-index:130;
+  top:0;
+  right:0;
+  width:clamp(230px,24vw,340px);
+  height:118px;
+  pointer-events:none;
+  background:radial-gradient(ellipse at 84% 18%,
+    rgba(33,26,63,1) 0%,
+    rgba(33,26,63,.96) 34%,
+    rgba(39,30,69,.78) 51%,
+    rgba(49,38,82,.34) 68%,
+    rgba(49,38,82,0) 86%);
+}
+.page-home .menu-button,
+.page-home .header-actions{
+  z-index:142!important;
+}
