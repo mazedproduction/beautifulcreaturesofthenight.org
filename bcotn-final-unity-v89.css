@@ -553,3 +553,28 @@ body:not(.page-home){
     mix-blend-mode:normal!important;
   }
 }
+
+
+/* v97 — lock the editorial header to its intended compact height */
+@media(min-width:981px){
+  .site-header,
+  .site-header.is-compact{
+    height:88px!important;
+    min-height:88px!important;
+    max-height:88px!important;
+  }
+  .header-shell,
+  .site-header.is-compact .header-shell{
+    height:88px!important;
+    min-height:88px!important;
+    max-height:88px!important;
+    grid-template-rows:88px!important;
+    overflow:visible!important;
+  }
+  .header-identity,
+  .site-header.is-compact .header-identity{
+    height:88px!important;
+    min-height:88px!important;
+    max-height:88px!important;
+  }
+}
