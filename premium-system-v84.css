@@ -505,3 +505,15 @@ body:not(.page-home) .header-support{color:var(--bc-cream)!important}
 @media(max-width:390px){
   .hero h1,.page-hero h1{font-size:clamp(2.2rem,11.9vw,3.15rem)!important}
 }
+
+
+/* v86 — adaptive header controls and team copy contrast */
+.menu-button,
+.header-actions{
+  color:#fff!important;
+  mix-blend-mode:difference;
+}
+.menu-button span,
+.lang-toggle,
+.header-support{color:inherit!important}
+.team-intro p{color:var(--bc-ink)!important}
