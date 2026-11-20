@@ -72,3 +72,49 @@ body:not(.page-home) .night .card{
   background:rgba(235,227,247,.26)!important;
   border-color:rgba(33,26,63,.16)!important;
 }
+
+
+/* v90 — remove every remaining legacy band or section surface */
+body:not(.page-home) .association-hero,
+body:not(.page-home) .projects-hero,
+body:not(.page-home) .definition-intro,
+body:not(.page-home) .definitions-teaser,
+body:not(.page-home) .definitions-teaser-grid,
+body:not(.page-home) .living-note,
+body:not(.page-home) .values,
+body:not(.page-home) .values-marquee,
+body:not(.page-home) .values-track,
+body:not(.page-home) .team-section,
+body:not(.page-home) .team-intro,
+body:not(.page-home) .gallery,
+body:not(.page-home) .project-list,
+body:not(.page-home) .profile-layout{
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body:not(.page-home) .association-hero::before,
+body:not(.page-home) .association-hero::after,
+body:not(.page-home) .projects-hero::before,
+body:not(.page-home) .projects-hero::after,
+body:not(.page-home) .definition-intro::before,
+body:not(.page-home) .definition-intro::after,
+body:not(.page-home) .definitions-teaser::before,
+body:not(.page-home) .definitions-teaser::after,
+body:not(.page-home) .living-note::before,
+body:not(.page-home) .living-note::after,
+body:not(.page-home) .values::before,
+body:not(.page-home) .values::after,
+body:not(.page-home) .values-marquee::before,
+body:not(.page-home) .values-marquee::after,
+body:not(.page-home) .team-section::before,
+body:not(.page-home) .team-section::after,
+body:not(.page-home) .gallery::before,
+body:not(.page-home) .gallery::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
