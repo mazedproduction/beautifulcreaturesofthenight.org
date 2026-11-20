@@ -130,3 +130,22 @@ body:not(.page-home) .contact-box{
   border-bottom:0!important;
   box-shadow:none!important;
 }
+
+
+/* v92 — centre the full-screen menu below the dark halo */
+.mobile-panel,
+.mobile-panel.open{
+  align-items:center!important;
+  text-align:center!important;
+}
+.mobile-panel > a{
+  width:auto!important;
+  align-self:center!important;
+  text-align:center!important;
+  transform:translateY(clamp(72px,8vh,104px))!important;
+}
+@media(max-width:700px){
+  .mobile-panel > a{
+    transform:translateY(clamp(44px,7vh,72px))!important;
+  }
+}
