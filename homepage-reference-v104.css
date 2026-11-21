@@ -276,3 +276,189 @@
     overflow-wrap:break-word!important;
   }
 }
+
+
+/* v108 — left-side original sculpture; right-side magazine headline */
+@media (min-width:1101px){
+  body.page-home .site-header,body.page-home .site-header.is-compact{
+    width:calc(100% - clamp(32px,6vw,100px))!important;
+    max-width:1600px!important;height:clamp(86px,9.5vw,132px)!important;
+    min-height:86px!important;border-top:0!important;
+    border-bottom:1px solid rgba(53,32,82,.42)!important;
+  }
+  body.page-home .header-shell,body.page-home .site-header.is-compact .header-shell{
+    display:grid!important;grid-template-columns:minmax(245px,33%) minmax(0,1fr)!important;
+    grid-template-rows:1fr!important;align-items:center!important;
+    gap:clamp(16px,3vw,48px)!important;
+  }
+  body.page-home .header-identity,body.page-home .site-header.is-compact .header-identity{
+    border-right:1px solid rgba(53,32,82,.42)!important;
+    padding-right:clamp(14px,2.1vw,36px)!important;
+  }
+  body.page-home .brand,body.page-home .site-header.is-compact .brand{
+    width:min(100%,430px)!important;max-width:430px!important;
+  }
+  body.page-home .links,body.page-home .site-header.is-compact .links{
+    display:flex!important;align-items:center!important;
+    justify-content:space-between!important;
+    gap:clamp(8px,1.5vw,28px)!important;
+  }
+  body.page-home .links a,body.page-home .site-header.is-compact .links a{
+    font-size:clamp(11px,.89vw,15px)!important;font-weight:500!important;
+    letter-spacing:.035em!important;
+  }
+  body.page-home .links .support-nav,body.page-home .site-header.is-compact .links .support-nav{
+    display:inline-flex!important;background:#E9C9F5!important;
+    border:1px solid rgba(53,32,82,.12)!important;border-radius:0!important;
+    padding:10px 17px!important;font-size:clamp(11px,.89vw,15px)!important;
+  }
+}
+body.page-home .home-hero{
+  background:#fff!important;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;
+  gap:clamp(24px,4.5vw,90px)!important;
+  width:calc(100% - clamp(32px,6vw,100px))!important;
+  max-width:1600px!important;
+  margin:0 auto!important;
+  min-height:clamp(500px,65svh,740px)!important;
+  height:auto!important;
+  padding:clamp(28px,4vw,65px) 0!important;
+  border-bottom:1px solid rgba(53,32,82,.42)!important;
+  overflow:hidden!important;
+}
+body.page-home .home-hero .hero-inner{
+  grid-column:2!important;grid-row:1!important;
+  position:relative!important;align-self:center!important;
+  z-index:2!important;
+}
+body.page-home .home-hero-visual{
+  grid-column:1!important;grid-row:1!important;
+  position:relative!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  width:100%!important;height:min(63svh,620px)!important;
+  min-height:400px!important;z-index:1!important;
+  overflow:visible!important;
+}
+body.page-home .home-hero-visual::before{
+  content:""!important;display:block!important;position:absolute!important;
+  inset:18% -14% 12% 7%!important;z-index:-1!important;
+  background:
+    linear-gradient(180deg,rgba(189,214,255,.68) 0 30%,transparent 30%),
+    linear-gradient(100deg,rgba(196,174,244,.45),rgba(196,174,244,.62) 55%,rgba(244,59,168,.28))!important;
+  border-radius:0!important;
+}
+body.page-home .home-hero-visual img{
+  display:block!important;
+  width:auto!important;height:auto!important;
+  max-width:100%!important;max-height:100%!important;
+  object-fit:contain!important;object-position:center!important;
+  filter:none!important;transform:none!important;
+}
+body.page-home .home-hero h1{
+  max-width:100%!important;margin:0!important;
+  font-family:"Neue Montreal","Neue Montréal","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.2rem,3.65vw,4.75rem)!important;
+  font-weight:400!important;letter-spacing:-.035em!important;
+  line-height:.98!important;text-transform:uppercase!important;
+  color:#352052!important;-webkit-text-fill-color:#352052!important;
+}
+body.page-home .home-hero h1::after{
+  content:""!important;display:block!important;
+  width:48%!important;height:3px!important;
+  margin:10px 0 0 43%!important;
+  background:#F43BA8!important;transform:rotate(-.7deg)!important;
+}
+body.page-home .home-hero p{
+  max-width:47ch!important;margin:clamp(20px,2.3vw,32px) 0 0!important;
+  font-size:clamp(1rem,1.18vw,1.3rem)!important;line-height:1.45!important;
+  font-weight:400!important;text-transform:none!important;
+  color:#352052!important;
+}
+body.page-home .home-hero .hero-actions{margin-top:26px!important}
+body.page-home .home-hero .hero-actions .button{
+  background:transparent!important;border:1px solid #352052!important;
+  color:#352052!important;font-weight:500!important;
+  border-radius:0!important;letter-spacing:.12em!important;
+}
+body.page-home .home-hero .hero-actions .button:hover{
+  background:#E9C9F5!important;
+}
+body.page-home .section,body.page-home .section.alt,
+body.page-home .cta{background-color:transparent!important;background-image:none!important}
+body.page-home .section .wrap,body.page-home .cta{
+  max-width:1600px!important;
+}
+body.page-home .section .card{background:transparent!important;border-radius:0!important}
+@media (max-width:1100px){
+  body.page-home .site-header,body.page-home .site-header.is-compact{
+    width:calc(100% - 32px)!important;height:80px!important;
+    min-height:80px!important;
+  }
+  body.page-home .header-shell,body.page-home .site-header.is-compact .header-shell{
+    display:block!important;
+  }
+  body.page-home .header-identity,body.page-home .site-header.is-compact .header-identity{
+    border-right:0!important;padding:0!important;justify-content:center!important;
+  }
+  body.page-home .links,body.page-home .site-header.is-compact .links{display:none!important}
+  body.page-home .brand,body.page-home .site-header.is-compact .brand{
+    width:min(58vw,310px)!important;margin:auto!important;
+  }
+  body.page-home .home-hero{
+    width:calc(100% - 36px)!important;display:grid!important;
+    grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;
+    min-height:0!important;gap:clamp(15px,3vw,35px)!important;
+    padding:35px 0!important;
+  }
+  body.page-home .home-hero-visual{
+    position:relative!important;grid-column:1!important;grid-row:1!important;
+    width:100%!important;height:min(55svh,540px)!important;
+    min-height:280px!important;margin:0!important;
+  }
+  body.page-home .home-hero .hero-inner{
+    grid-column:2!important;grid-row:1!important;align-self:center!important;
+  }
+  body.page-home .home-hero h1{
+    width:100%!important;max-width:100%!important;min-height:0!important;
+    font-size:clamp(1.8rem,4.4vw,3.5rem)!important;
+  }
+  body.page-home .home-hero p{max-width:100%!important}
+  body.page-home .home-hero-visual::before{inset:18% -12% 12% 7%!important}
+}
+@media (max-width:650px){
+  body.page-home .site-header,body.page-home .site-header.is-compact{
+    height:70px!important;min-height:70px!important;
+  }
+  body.page-home .brand,body.page-home .site-header.is-compact .brand{
+    width:min(57vw,270px)!important;
+  }
+  body.page-home .home-hero{
+    display:flex!important;flex-direction:column!important;
+    width:calc(100% - 32px)!important;
+    min-height:0!important;height:auto!important;
+    gap:0!important;padding:22px 0 32px!important;
+  }
+  body.page-home .home-hero-visual{
+    position:relative!important;top:auto!important;right:auto!important;
+    order:1!important;width:100%!important;
+    height:min(48svh,390px)!important;min-height:220px!important;
+    align-self:center!important;margin:0!important;
+  }
+  body.page-home .home-hero-visual::before{inset:20% 8% 10% 8%!important}
+  body.page-home .home-hero .hero-inner{
+    order:2!important;width:100%!important;align-self:stretch!important;
+    position:relative!important;
+  }
+  body.page-home .home-hero h1{
+    width:100%!important;max-width:100%!important;min-height:0!important;
+    font-size:clamp(2rem,8.1vw,3.7rem)!important;
+    line-height:1.01!important;overflow-wrap:break-word!important;
+  }
+  body.page-home .home-hero h1::after{
+    width:42%!important;margin-left:48%!important;
+  }
+  body.page-home .home-hero p{
+    margin-top:22px!important;font-size:1rem!important;max-width:100%!important;
+  }
+  body.page-home .home-hero .hero-actions{margin-top:20px!important}
+}
