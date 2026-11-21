@@ -261,34 +261,3 @@ html body.page-home .home-hero-visual img{
     background-size:100% 100%!important;
   }
 }
-
-
-/* v115 — artwork is an independently authored texture graphic, statue unchanged. */
-html body.page-home .home-hero-visual::before{
-  content:""!important;display:block!important;
-  background-image:url("/bcotn-statue-backdrop-v115.svg")!important;
-  background-repeat:no-repeat!important;
-  background-position:center center!important;
-  background-size:100% 100%!important;
-  background-color:transparent!important;
-  inset:0!important;
-  width:100%!important;height:100%!important;
-  opacity:1!important;pointer-events:none!important;
-}
-html body.page-home .home-hero-visual::after{content:none!important;display:none!important}
-html body.page-home .home-hero-visual img{
-  height:88%!important;
-  max-height:88%!important;
-  width:auto!important;
-  max-width:83%!important;
-  object-fit:contain!important;
-  object-position:center bottom!important;
-  filter:none!important;
-  transform:none!important;
-}
-@media(max-width:650px){
-  html body.page-home .home-hero-visual img{
-    height:87%!important;max-height:87%!important;
-    max-width:82%!important;
-  }
-}
