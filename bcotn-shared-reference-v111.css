@@ -351,3 +351,31 @@ html body.page-home .home-hero-visual img{
     color:#352052!important;-webkit-text-fill-color:#352052!important;
   }
 }
+
+
+/* v117 — screenshot-matched desktop header spacing only.
+   The brand's calculated width is locked to its pre-v117 dimensions. */
+@media (min-width:1101px) {
+  html body .site-header,
+  html body .site-header.is-compact {
+    width:calc(100% - clamp(24px,4vw,80px))!important;
+    max-width:1760px!important;
+  }
+  html body .brand,
+  html body .site-header.is-compact .brand {
+    width:min(390px, calc((100vw - clamp(30px,7vw,116px)) * .30))!important;
+    max-width:390px!important;
+    transform:none!important;
+  }
+  html body .brand img,
+  html body .site-header.is-compact .brand img {
+    width:100%!important;
+    height:auto!important;
+    transform:none!important;
+  }
+  html body .site-header .links,
+  html body .site-header.is-compact .links {
+    justify-content:space-between!important;
+    align-items:center!important;
+  }
+}
