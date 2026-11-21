@@ -1,0 +1,154 @@
+/* BCOTN — shared reference-accurate editorial surface and navigation, v111.
+   No content, routes, logo artwork or statue artwork are changed. */
+:root{
+  --bc-ref-ink:#352052;
+  --bc-ref-paper:#f5f0f4;
+  --bc-ref-lavender:#E9C9F5;
+  --bc-ref-blue:#BDD6FF;
+  --bc-ref-pink:#F43BA8;
+  --bc-ref-lime:#D6FA62;
+}
+html{background:#f5f0f4!important}
+html body,html body.page-home,html body:not(.page-home){
+  background-color:var(--bc-ref-paper)!important;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' seed='12' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 88% 73% at 76% 24%,rgba(255,255,255,.45) 0%,transparent 80%),
+    linear-gradient(112deg,#f2edf1 0%,#f7f2f6 42%,#f1ebf4 100%)!important;
+  background-repeat:repeat,no-repeat,no-repeat!important;
+  background-size:160px 160px,100% 100%,100% 100%!important;
+  background-blend-mode:multiply,normal,normal!important;
+  color:var(--bc-ref-ink)!important;
+}
+html body .site-header,html body .site-header.is-compact{
+  position:relative!important;top:auto!important;left:auto!important;right:auto!important;
+  background:transparent!important;
+  width:calc(100% - clamp(30px,7vw,116px))!important;
+  max-width:1760px!important;
+  height:clamp(80px,8vw,115px)!important;
+  min-height:0!important;max-height:none!important;
+  border:0!important;border-radius:0!important;
+  box-shadow:none!important;
+  margin:0 auto!important;padding:0!important;
+}
+html body .header-shell,html body .site-header.is-compact .header-shell{
+  display:grid!important;
+  grid-template-columns:minmax(225px,30%) minmax(0,1fr)!important;
+  grid-template-rows:1fr!important;
+  width:100%!important;height:100%!important;
+  min-height:0!important;
+  align-items:center!important;gap:clamp(22px,4vw,72px)!important;
+  margin:0!important;padding:0!important;
+}
+html body .header-top,html body .site-header.is-compact .header-top{
+  display:none!important;
+}
+html body .header-identity,html body .site-header.is-compact .header-identity{
+  position:relative!important;inset:auto!important;
+  width:100%!important;height:100%!important;
+  min-height:0!important;
+  display:flex!important;align-items:center!important;justify-content:flex-start!important;
+  padding:0!important;margin:0!important;
+  border:0!important;box-shadow:none!important;transform:none!important;
+}
+html body .brand,html body .site-header.is-compact .brand{
+  width:min(100%,390px)!important;max-width:390px!important;
+  display:flex!important;align-items:center!important;justify-content:flex-start!important;
+  margin:0!important;padding:0!important;transform:none!important;
+}
+html body .brand img,html body .site-header.is-compact .brand img{
+  width:100%!important;height:auto!important;max-height:95px!important;
+  object-fit:contain!important;object-position:left center!important;
+  filter:none!important;transform:none!important;
+}
+html body .links,html body .site-header.is-compact .links{
+  display:flex!important;align-items:center!important;justify-content:space-between!important;
+  width:100%!important;gap:clamp(12px,2vw,36px)!important;
+  padding:0!important;margin:0!important;
+  background:transparent!important;white-space:nowrap!important;
+}
+html body .links a,html body .site-header.is-compact .links a{
+  font-family:"Neue Montreal","Neue Montréal","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+  color:var(--bc-ref-ink)!important;-webkit-text-fill-color:var(--bc-ref-ink)!important;
+  font-size:clamp(12px,1vw,18px)!important;
+  font-weight:500!important;letter-spacing:0!important;
+  text-transform:uppercase!important;line-height:1.2!important;
+}
+html body .links .support-nav,html body .site-header.is-compact .links .support-nav{
+  display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;
+  background:var(--bc-ref-lime)!important;
+  padding:9px 17px!important;
+  border:0!important;border-radius:0!important;box-shadow:none!important;
+  font-family:"Neue Montreal","Neue Montréal","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(12px,1vw,18px)!important;font-weight:500!important;
+  letter-spacing:0!important;
+}
+html body .links .support-nav:hover{background:var(--bc-ref-lavender)!important}
+html body .header-support{display:none!important}
+html body .mobile-panel{background:var(--bc-ref-paper)!important}
+html body .mobile-panel a{color:var(--bc-ref-ink)!important}
+html body .mobile-panel .mobile-support{background:var(--bc-ref-lime)!important}
+html body .site-header:before,html body .site-header:after{
+  content:none!important;display:none!important;border:0!important;
+}
+html body .site-header .header-identity:before,html body .site-header .header-identity:after{
+  border:0!important;box-shadow:none!important;
+}
+/* Homepage artwork: exact rectangular arrangement and smooth pink/purple glow behind unchanged torso. */
+@media (min-width:651px){
+ html body.page-home .home-hero-visual::before{
+   content:""!important;display:block!important;position:absolute!important;
+   inset:27% 3% 8% 3%!important;z-index:-1!important;
+   border-radius:0!important;border:0!important;box-shadow:none!important;
+   background:
+     linear-gradient(to bottom,rgba(189,214,255,.98) 0 20%,transparent 20% 100%),
+     radial-gradient(ellipse 62% 88% at 95% 100%,rgba(249,70,179,.9) 0%,rgba(231,91,206,.67) 50%,transparent 100%),
+     linear-gradient(99deg,rgba(194,206,255,.82) 0%,#a990f4 34%,#9259d4 65%,#cf70da 100%)!important;
+   background-blend-mode:normal,normal,normal!important;
+ }
+}
+html body.page-home .home-hero-visual img{
+  filter:none!important;transform:none!important;
+  object-fit:contain!important;
+}
+@media(max-width:1100px){
+  html body .site-header,html body .site-header.is-compact{
+    height:76px!important;min-height:76px!important;
+    width:calc(100% - 40px)!important;
+  }
+  html body .header-shell,html body .site-header.is-compact .header-shell{
+    display:block!important;height:100%!important;
+  }
+  html body .header-identity,html body .site-header.is-compact .header-identity{
+    display:flex!important;justify-content:center!important;
+    height:100%!important;padding:0!important;
+  }
+  html body .links,html body .site-header.is-compact .links{display:none!important}
+  html body .brand,html body .site-header.is-compact .brand{
+    width:min(58vw,310px)!important;margin:0 auto!important;
+  }
+  html body .menu-button,html body .site-header.is-compact .menu-button{
+    display:flex!important;position:absolute!important;
+    left:0!important;right:auto!important;top:50%!important;
+    transform:translateY(-50%)!important;
+  }
+}
+@media(max-width:650px){
+  html body .site-header,html body .site-header.is-compact{
+    width:calc(100% - 30px)!important;
+    height:70px!important;min-height:70px!important;
+  }
+  html body .brand,html body .site-header.is-compact .brand{
+    width:min(57vw,270px)!important;margin:auto!important;
+  }
+  html body.page-home .home-hero-visual::before{
+    content:""!important;display:block!important;position:absolute!important;
+    inset:20% 6% 7% 6%!important;z-index:-1!important;
+    background:
+      linear-gradient(to bottom,rgba(189,214,255,.95) 0 20%,transparent 20%),
+      radial-gradient(ellipse 75% 95% at 95% 100%,rgba(249,70,179,.85),transparent 100%),
+      linear-gradient(99deg,#b5c9ff,#a98df2 48%,#c876db)!important;
+    border-radius:0!important;
+  }
+}
