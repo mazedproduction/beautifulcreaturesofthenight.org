@@ -445,3 +445,58 @@ html body .lang-menu button:focus-visible{
     border:1px solid #352052!important;
   }
 }
+
+
+/* v119 — accessible language selector. Keep existing header look and alignment. */
+html body .language{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:visible!important;
+}
+html body .language .lang-toggle{
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  touch-action:manipulation!important;
+}
+html body .language .lang-menu{
+  display:none!important;
+  position:absolute!important;
+  top:calc(100% + 8px)!important;
+  right:0!important;left:auto!important;
+  width:78px!important;min-width:78px!important;
+  padding:5px!important;
+  border:1px solid rgba(53,32,82,.28)!important;
+  border-radius:0!important;
+  background:#faf6f9!important;
+  opacity:1!important;visibility:visible!important;
+  transform:none!important;
+  z-index:9999!important;
+  box-shadow:0 6px 18px rgba(53,32,82,.10)!important;
+}
+html body .language .lang-menu.open{
+  display:block!important;
+}
+html body .language .lang-menu [data-lang]{
+  display:block!important;
+  width:100%!important;
+  min-height:35px!important;
+  padding:8px!important;
+  border:0!important;border-radius:0!important;
+  font-family:"Neue Montreal","Neue Montréal","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+  font-size:13px!important;font-weight:500!important;
+  text-align:center!important;text-transform:uppercase!important;
+  background:transparent!important;
+  color:#352052!important;-webkit-text-fill-color:#352052!important;
+  cursor:pointer!important;pointer-events:auto!important;
+}
+html body .language .lang-menu [data-lang]:hover,
+html body .language .lang-menu [data-lang].active{
+  background:#E9C9F5!important;
+}
+html body .site-header .links{overflow:visible!important}
+html body .site-header .header-shell{overflow:visible!important}
+html body .site-header .links > .language{z-index:300!important}
+@media(max-width:1100px){
+  html body > .header-actions{overflow:visible!important}
+  html body > .header-actions .language{z-index:1000!important}
+}
