@@ -261,3 +261,93 @@ html body.page-home .home-hero-visual img{
     background-size:100% 100%!important;
   }
 }
+
+
+/* v116 — header language switcher, identical editorial menu typography and ink.
+   Keep the approved background, artwork, navigation labels and Support styling. */
+@media(min-width:1101px){
+  html body .site-header .links,
+  html body .site-header.is-compact .links{
+    display:flex!important;
+    justify-content:space-between!important;
+    align-items:center!important;
+    gap:clamp(12px,1.75vw,28px)!important;
+    overflow:visible!important;
+    white-space:nowrap!important;
+  }
+  html body .site-header .links > .language{
+    display:flex!important;flex:0 0 auto!important;
+    position:relative!important;
+    margin:0!important;align-items:center!important;
+    justify-content:center!important;
+    visibility:visible!important;opacity:1!important;
+  }
+  html body .site-header .links .lang-toggle{
+    display:inline-flex!important;
+    align-items:center!important;justify-content:center!important;
+    width:auto!important;min-width:34px!important;height:auto!important;
+    padding:9px 0!important;margin:0!important;
+    border:0!important;border-radius:0!important;
+    background:transparent!important;box-shadow:none!important;
+    color:#352052!important;-webkit-text-fill-color:#352052!important;
+    font-family:"Neue Montreal","Neue Montréal","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-size:clamp(12px,1vw,18px)!important;
+    font-weight:500!important;letter-spacing:0!important;
+    line-height:1.2!important;text-transform:uppercase!important;
+    cursor:pointer!important;
+    visibility:visible!important;opacity:1!important;
+  }
+  html body .site-header .links .lang-toggle:hover,
+  html body .site-header .links .lang-toggle:focus-visible{
+    color:#352052!important;-webkit-text-fill-color:#352052!important;
+    text-decoration:underline!important;text-underline-offset:5px!important;
+  }
+  html body .site-header .links .lang-menu{
+    position:absolute!important;top:calc(100% + 6px)!important;right:0!important;
+    min-width:70px!important;padding:5px!important;z-index:500!important;
+    background:#faf6f9!important;border:1px solid rgba(53,32,82,.32)!important;
+  }
+  html body .site-header .links .lang-menu:not(.open){display:none!important}
+  html body .site-header .links .lang-menu.open{display:block!important}
+  html body .site-header .links .lang-menu button{
+    color:#352052!important;
+    font-family:"Neue Montreal","Neue Montréal","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-size:13px!important;font-weight:500!important;
+    background:transparent!important;
+    -webkit-text-fill-color:#352052!important;
+  }
+  html body .site-header .links .lang-menu button:hover,
+  html body .site-header .links .lang-menu button.active{
+    background:#E9C9F5!important;
+  }
+  html body > .header-actions{display:none!important}
+}
+@media(max-width:1100px){
+  html body > .header-actions{
+    display:flex!important;align-items:center!important;justify-content:flex-end!important;
+    position:fixed!important;top:17px!important;right:20px!important;z-index:180!important;
+    width:auto!important;height:auto!important;padding:0!important;
+    gap:12px!important;mix-blend-mode:normal!important;
+  }
+  html body > .header-actions .language-mount,
+  html body > .header-actions .language{
+    display:flex!important;visibility:visible!important;opacity:1!important;
+    position:relative!important;align-items:center!important;
+  }
+  html body > .header-actions .lang-toggle{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    width:auto!important;min-width:40px!important;height:38px!important;
+    padding:0 7px!important;margin:0!important;
+    border:0!important;border-radius:0!important;background:transparent!important;
+    color:#352052!important;-webkit-text-fill-color:#352052!important;
+    font-family:"Neue Montreal","Neue Montréal","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-size:14px!important;font-weight:500!important;letter-spacing:0!important;
+  }
+  html body > .header-actions .lang-menu{
+    position:absolute!important;top:42px!important;right:0!important;z-index:500!important;
+    background:#faf6f9!important;border:1px solid rgba(53,32,82,.3)!important;
+  }
+  html body > .header-actions .lang-menu button{
+    color:#352052!important;-webkit-text-fill-color:#352052!important;
+  }
+}
