@@ -25,14 +25,14 @@ es:{'Mission — BCOTN':'Misión — BCOTN','Programmes — BCOTN':'Programas �
 };
 const originalTitle=document.title;
 const source=new Map();function remember(){const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const s=n.nodeValue.trim().replace(/\s+/g,' ');if(s&&n.parentElement&&!n.parentElement.closest('script,style,.lang-menu,.lang-toggle'))source.set(n,s)}}
-function setLanguage(lang){if(!['en','fr','es'].includes(lang))lang='en';const d=lang==='en'?en:lang==='es'?es:fr;document.documentElement.lang=lang;source.forEach((s,n)=>{n.nodeValue=n.nodeValue.replace(n.nodeValue.trim(),d[s]||s)});document.title=pageTitles[lang]?.[originalTitle]||originalTitle;const toggle=document.querySelector('.lang-toggle');toggle.textContent=lang.toUpperCase();toggle.setAttribute('aria-label',lang==='fr'?'Changer de langue':lang==='es'?'Cambiar idioma':'Change language');toggle.setAttribute('aria-expanded','false');document.querySelectorAll('.lang-menu button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('bcotn-language',lang);document.querySelector('.lang-menu').classList.remove('open')}
+function setLanguage(lang){if(!['en','fr','es'].includes(lang))lang='en';const d=lang==='en'?en:lang==='es'?es:fr;document.documentElement.lang=lang;source.forEach((s,n)=>{n.nodeValue=n.nodeValue.replace(n.nodeValue.trim(),d[s]||s)});document.title=pageTitles[lang]?.[originalTitle]||originalTitle;const toggle=document.querySelector('.lang-toggle');toggle.textContent=lang.toUpperCase();toggle.setAttribute('aria-label',lang==='fr'?'Changer de langue':lang==='es'?'Cambiar idioma':'Change language');toggle.setAttribute('aria-expanded','false');document.querySelectorAll('.lang-menu button').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.setAttribute('aria-checked',String(b.dataset.lang===lang))});try{localStorage.setItem('bcotn-language',lang)}catch(e){}document.querySelector('.lang-menu')?.classList.remove('open')}
 const mobilePanel=document.querySelector('.mobile-panel'),menuButton=document.querySelector('.menu-button'),mobileQuery=window.matchMedia('(max-width:1100px)');
 function setMobileMenu(open){mobilePanel?.classList.toggle('open',open);menuButton?.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)}
 menuButton?.addEventListener('click',()=>setMobileMenu(!mobilePanel?.classList.contains('open')));
 mobilePanel?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMobileMenu(false)));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')setMobileMenu(false)});
 mobileQuery.addEventListener?.('change',e=>{if(!e.matches)setMobileMenu(false)});
-const picker=document.createElement('div');picker.className='language';picker.innerHTML='<button class="lang-toggle" aria-label="Change language" aria-expanded="false">EN</button><div class="lang-menu"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="es">ES</button></div>';document.querySelector('.language-mount')?.appendChild(picker);
+const picker=document.createElement('div');picker.className='language';picker.innerHTML='<button type="button" class="lang-toggle" aria-label="Change language" aria-haspopup="true" aria-controls="bcotn-lang-options" aria-expanded="false">EN</button><div class="lang-menu" id="bcotn-lang-options" role="menu" aria-label="Select language"><button type="button" role="menuitemradio" data-lang="en" aria-checked="true">EN</button><button type="button" role="menuitemradio" data-lang="fr" aria-checked="false">FR</button><button type="button" role="menuitemradio" data-lang="es" aria-checked="false">ES</button></div>';document.querySelector('.language-mount')?.appendChild(picker);
 document.querySelector('.header-actions')?.insertBefore(menuButton,document.querySelector('.language-mount'));
 const persistentActions=document.querySelector('.header-actions');if(persistentActions)document.body.appendChild(persistentActions);
 // Keep one functioning EN / FR / ES picker: in desktop navigation, or in the mobile header controls.
@@ -46,8 +46,14 @@ positionLanguagePicker();
 mobileQuery.addEventListener('change',positionLanguagePicker);
 remember();
 const languageToggle=picker.querySelector('.lang-toggle'),languageMenu=picker.querySelector('.lang-menu');
-languageToggle.addEventListener('click',e=>{e.stopPropagation();const open=!languageMenu.classList.contains('open');languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))});
-picker.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
-document.addEventListener('click',()=>{languageMenu.classList.remove('open');languageToggle.setAttribute('aria-expanded','false')});
+function closeLanguageMenu(){languageMenu.classList.remove('open');languageToggle.setAttribute('aria-expanded','false')}
+function toggleLanguageMenu(open){languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))}
+languageToggle.addEventListener('click',e=>{e.stopPropagation();toggleLanguageMenu(!languageMenu.classList.contains('open'))});
+languageToggle.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='Enter'||e.key===' '){e.preventDefault();toggleLanguageMenu(true);languageMenu.querySelector('[data-lang].active')?.focus()}});
+picker.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();setLanguage(b.dataset.lang);closeLanguageMenu();languageToggle.focus()}));
+languageMenu.addEventListener('keydown',e=>{const buttons=[...languageMenu.querySelectorAll('[data-lang]')];const i=buttons.indexOf(document.activeElement);if(e.key==='Escape'){closeLanguageMenu();languageToggle.focus()}else if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();buttons[(i+(e.key==='ArrowDown'?1:buttons.length-1))%buttons.length]?.focus()}});
+document.addEventListener('click',e=>{if(!picker.contains(e.target))closeLanguageMenu()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLanguageMenu()});
+mobileQuery.addEventListener('change',closeLanguageMenu);
 const currentPath=location.pathname.replace(/\/+$/,'')||'/';document.querySelectorAll('.links a,.mobile-panel a').forEach(a=>{const path=new URL(a.href,location.href).pathname.replace(/\/+$/,'')||'/';if(path===currentPath)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-setLanguage(localStorage.getItem('bcotn-language')||'en');
+let savedLang='en';try{savedLang=localStorage.getItem('bcotn-language')||'en'}catch(e){}setLanguage(savedLang);
