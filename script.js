@@ -35,6 +35,15 @@ mobileQuery.addEventListener?.('change',e=>{if(!e.matches)setMobileMenu(false)})
 const picker=document.createElement('div');picker.className='language';picker.innerHTML='<button class="lang-toggle" aria-label="Change language" aria-expanded="false">EN</button><div class="lang-menu"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="es">ES</button></div>';document.querySelector('.language-mount')?.appendChild(picker);
 document.querySelector('.header-actions')?.insertBefore(menuButton,document.querySelector('.language-mount'));
 const persistentActions=document.querySelector('.header-actions');if(persistentActions)document.body.appendChild(persistentActions);
+// Keep one functioning EN / FR / ES picker: in desktop navigation, or in the mobile header controls.
+function positionLanguagePicker(){
+  const desktopNav=document.querySelector('.site-header .links');
+  const mobileMount=persistentActions?.querySelector('.language-mount');
+  const destination=mobileQuery.matches?mobileMount:desktopNav;
+  if(destination&&picker.parentElement!==destination)destination.appendChild(picker);
+}
+positionLanguagePicker();
+mobileQuery.addEventListener('change',positionLanguagePicker);
 remember();
 const languageToggle=picker.querySelector('.lang-toggle'),languageMenu=picker.querySelector('.lang-menu');
 languageToggle.addEventListener('click',e=>{e.stopPropagation();const open=!languageMenu.classList.contains('open');languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))});
