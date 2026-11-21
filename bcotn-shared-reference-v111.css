@@ -206,3 +206,58 @@ html body.page-home .home-hero-visual img{
   html body.page-home .home-hero-visual::before{inset:39% 6% 8% 6%!important}
   html body.page-home .home-hero-visual::after{inset:22% 49% 60% 18%!important}
 }
+
+
+/* v113 — dedicated reference-derived assets, rather than freehand CSS gradients.
+   The backdrop contains the two exact-sized rectangles in a 810×396 coordinate
+   system; the untouched torso remains a separate foreground PNG. */
+html body,html body.page-home,html body:not(.page-home){
+  background-color:#faf6f9!important;
+  background-image:url("/bcotn-paper-grain-v113.svg")!important;
+  background-repeat:repeat!important;
+  background-size:256px 256px!important;
+  background-position:top left!important;
+}
+html body.page-home .home-hero-visual{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:visible!important;
+}
+html body.page-home .home-hero-visual::before{
+  content:""!important;
+  position:absolute!important;
+  display:block!important;
+  inset:0!important;
+  width:100%!important;height:100%!important;
+  z-index:-1!important;
+  background-image:url("/bcotn-statue-backdrop-v113.svg")!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-size:100% 100%!important;
+  background-color:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+  opacity:1!important;
+  pointer-events:none!important;
+}
+html body.page-home .home-hero-visual::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+html body.page-home .home-hero-visual img{
+  position:relative!important;
+  z-index:1!important;
+  object-fit:contain!important;
+  filter:none!important;
+  transform:none!important;
+}
+@media(max-width:650px){
+  html body.page-home .home-hero-visual::before{
+    inset:0!important;
+    width:100%!important;height:100%!important;
+    background-size:100% 100%!important;
+  }
+}
