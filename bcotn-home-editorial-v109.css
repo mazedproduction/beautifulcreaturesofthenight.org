@@ -265,3 +265,31 @@ body.page-home .section.alt .card{background:transparent!important;border-top:1p
 @media (prefers-reduced-motion:reduce){
  .bcotn-feature .bcotn-arrow{transition:none}
 }
+
+/* v110 — continuous white-lavender fine-grain editorial canvas.
+   Surface only: typography, layout, images and other pages unchanged. */
+html:has(body.page-home){
+  background-color:#faf7ff!important;
+}
+body.page-home{
+  background-color:#faf7ff!important;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cfilter id='film'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.87' numOctaves='3' stitchTiles='stitch' seed='8'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23film)' opacity='.09'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 70% 52% at 78% 19%,rgba(233,201,245,.24) 0%,transparent 78%),
+    radial-gradient(ellipse 65% 60% at 12% 68%,rgba(196,174,244,.14) 0%,transparent 75%),
+    linear-gradient(135deg,#fffefd 0%,#fbf9ff 34%,#f5f0fd 67%,#faf8ff 100%)!important;
+  background-size:180px 180px,100% 100%,100% 100%,100% 100%!important;
+  background-position:0 0,center,center,center!important;
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat!important;
+  background-blend-mode:multiply,normal,normal,normal!important;
+}
+body.page-home .site-header,
+body.page-home .site-header.is-compact,
+body.page-home .home-hero,
+body.page-home .section,
+body.page-home .section.alt,
+body.page-home .cta,
+body.page-home .footer{
+  background-color:transparent!important;
+  background-image:none!important;
+}
