@@ -139,7 +139,7 @@ function setLanguage(lang){
   document.querySelector('.lang-menu')?.classList.remove('open');
 }
 const mobilePanel=document.querySelector('.mobile-panel'),menuButton=document.querySelector('.menu-button'),mobileQuery=window.matchMedia('(max-width:1100px)');
-function setMobileMenu(open){mobilePanel?.classList.toggle('open',open);menuButton?.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)}
+function setMobileMenu(open){if(open)document.querySelector('.lang-menu')?.classList.remove('open');document.querySelector('.lang-toggle')?.setAttribute('aria-expanded','false');mobilePanel?.classList.toggle('open',open);menuButton?.setAttribute('aria-expanded',String(open));menuButton?.setAttribute('aria-label',open?'Close menu':'Open menu');document.body.classList.toggle('menu-open',open)}
 menuButton?.addEventListener('click',()=>setMobileMenu(!mobilePanel?.classList.contains('open')));
 mobilePanel?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMobileMenu(false)));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')setMobileMenu(false)});
@@ -159,7 +159,7 @@ mobileQuery.addEventListener('change',positionLanguagePicker);
 remember();
 const languageToggle=picker.querySelector('.lang-toggle'),languageMenu=picker.querySelector('.lang-menu');
 function closeLanguageMenu(){languageMenu.classList.remove('open');languageToggle.setAttribute('aria-expanded','false')}
-function toggleLanguageMenu(open){languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))}
+function toggleLanguageMenu(open){if(open)setMobileMenu(false);languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))}
 languageToggle.addEventListener('click',e=>{e.stopPropagation();toggleLanguageMenu(!languageMenu.classList.contains('open'))});
 languageToggle.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){e.preventDefault();toggleLanguageMenu(true);languageMenu.querySelector('[data-lang].active')?.focus()}});
 picker.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();setLanguage(b.dataset.lang);closeLanguageMenu();languageToggle.focus()}));
