@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1620" height="792" viewBox="0 0 810 396" role="img" aria-label="Layered blue and lavender pink gradient rectangles with fine film grain">
+<defs>
+ <linearGradient id="main" x1="0" y1=".25" x2="1" y2=".85" gradientUnits="objectBoundingBox">
+  <stop offset="0" stop-color="#c6c4f8"/>
+  <stop offset=".14" stop-color="#b3b5ff"/>
+  <stop offset=".36" stop-color="#a688f1"/>
+  <stop offset=".61" stop-color="#915ed7"/>
+  <stop offset=".80" stop-color="#bc5bcf"/>
+  <stop offset="1" stop-color="#ec86cb"/>
+ </linearGradient>
+ <radialGradient id="leftGlow" cx="0" cy="1" r="1">
+  <stop offset="0" stop-color="#e2d3ff" stop-opacity=".92"/>
+  <stop offset=".72" stop-color="#d3c6ff" stop-opacity=".19"/>
+  <stop offset="1" stop-color="#d3c6ff" stop-opacity="0"/>
+ </radialGradient>
+ <radialGradient id="rightGlow" cx=".99" cy="1" r=".87">
+  <stop offset="0" stop-color="#ff8dce" stop-opacity=".93"/>
+  <stop offset=".43" stop-color="#ed65cd" stop-opacity=".54"/>
+  <stop offset="1" stop-color="#ed65cd" stop-opacity="0"/>
+ </radialGradient>
+ <linearGradient id="blue" x1=".1" y1="0" x2=".85" y2="1">
+  <stop offset="0" stop-color="#bfd8ff"/>
+  <stop offset=".55" stop-color="#b6d0ff"/>
+  <stop offset="1" stop-color="#9db5f9"/>
+ </linearGradient>
+ <filter id="grain" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency=".84" numOctaves="3" seed="13" stitchTiles="stitch" result="t"/>
+  <feColorMatrix in="t" type="saturate" values="0" result="grey"/>
+  <feComponentTransfer in="grey"><feFuncA type="linear" slope=".22"/></feComponentTransfer>
+ </filter>
+ <clipPath id="large"><rect x="59" y="105" width="676" height="245"/></clipPath>
+ <clipPath id="small"><rect x="155" y="33" width="293" height="258"/></clipPath>
+ </defs>
+ <g clip-path="url(#large)">
+  <rect x="59" y="105" width="676" height="245" fill="url(#main)"/>
+  <rect x="59" y="105" width="676" height="245" fill="url(#leftGlow)"/>
+  <rect x="59" y="105" width="676" height="245" fill="url(#rightGlow)"/>
+  <rect x="59" y="105" width="676" height="245" filter="url(#grain)" style="mix-blend-mode:soft-light"/>
+ </g>
+ <g clip-path="url(#small)">
+  <rect x="155" y="33" width="293" height="258" fill="url(#blue)" opacity=".91"/>
+  <rect x="155" y="33" width="293" height="258" filter="url(#grain)" style="mix-blend-mode:soft-light"/>
+ </g>
+</svg>
