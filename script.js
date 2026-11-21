@@ -161,7 +161,7 @@ const languageToggle=picker.querySelector('.lang-toggle'),languageMenu=picker.qu
 function closeLanguageMenu(){languageMenu.classList.remove('open');languageToggle.setAttribute('aria-expanded','false')}
 function toggleLanguageMenu(open){languageMenu.classList.toggle('open',open);languageToggle.setAttribute('aria-expanded',String(open))}
 languageToggle.addEventListener('click',e=>{e.stopPropagation();toggleLanguageMenu(!languageMenu.classList.contains('open'))});
-languageToggle.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='Enter'||e.key===' '){e.preventDefault();toggleLanguageMenu(true);languageMenu.querySelector('[data-lang].active')?.focus()}});
+languageToggle.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){e.preventDefault();toggleLanguageMenu(true);languageMenu.querySelector('[data-lang].active')?.focus()}});
 picker.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();setLanguage(b.dataset.lang);closeLanguageMenu();languageToggle.focus()}));
 languageMenu.addEventListener('keydown',e=>{const buttons=[...languageMenu.querySelectorAll('[data-lang]')];const i=buttons.indexOf(document.activeElement);if(e.key==='Escape'){closeLanguageMenu();languageToggle.focus()}else if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();buttons[(i+(e.key==='ArrowDown'?1:buttons.length-1))%buttons.length]?.focus()}});
 document.addEventListener('click',e=>{if(!picker.contains(e.target))closeLanguageMenu()});
