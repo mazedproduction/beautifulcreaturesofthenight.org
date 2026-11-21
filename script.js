@@ -24,8 +24,120 @@ en:{'Mission — BCOTN':'Mission — BCOTN','Programmes — BCOTN':'Programmes �
 es:{'Mission — BCOTN':'Misión — BCOTN','Programmes — BCOTN':'Programas — BCOTN','Projets — BCOTN':'Proyectos — BCOTN','Qui nous sommes — BCOTN':'Quiénes somos — BCOTN','Soutenir — BCOTN':'Apóyanos — BCOTN','Our Definitions — BCOTN':'Nuestras definiciones — BCOTN'}
 };
 const originalTitle=document.title;
-const source=new Map();function remember(){const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const s=n.nodeValue.trim().replace(/\s+/g,' ');if(s&&n.parentElement&&!n.parentElement.closest('script,style,.lang-menu,.lang-toggle'))source.set(n,s)}}
-function setLanguage(lang){if(!['en','fr','es'].includes(lang))lang='en';const d=lang==='en'?en:lang==='es'?es:fr;document.documentElement.lang=lang;source.forEach((s,n)=>{n.nodeValue=n.nodeValue.replace(n.nodeValue.trim(),d[s]||s)});document.title=pageTitles[lang]?.[originalTitle]||originalTitle;const toggle=document.querySelector('.lang-toggle');toggle.textContent=lang.toUpperCase();toggle.setAttribute('aria-label',lang==='fr'?'Changer de langue':lang==='es'?'Cambiar idioma':'Change language');toggle.setAttribute('aria-expanded','false');document.querySelectorAll('.lang-menu button').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.setAttribute('aria-checked',String(b.dataset.lang===lang))});try{localStorage.setItem('bcotn-language',lang)}catch(e){}document.querySelector('.lang-menu')?.classList.remove('open')}
+// Some pages are authored in French and others in English.
+// Normalize each original text through the existing French-to-English catalog.
+const englishToFrench=new Map();
+Object.entries(en).forEach(([french,english])=>{
+  if(!englishToFrench.has(english))englishToFrench.set(english,french);
+});
+const addedTranslations={
+  'Art, diplomacy and cultural exchange in service of trans and queer voices.':{
+    fr:'Art, diplomatie et échanges culturels au service des voix trans et queer.',
+    es:'Arte, diplomacia e intercambio cultural al servicio de las voces trans y queer.'
+  },
+  'We build a living bridge between Paris and Mexico City through residencies, films, music, fashion, and safer creative spaces.':{
+    fr:'Nous construisons un pont vivant entre Paris et Mexico à travers des résidences, des films, la musique, la mode et des espaces créatifs plus sûrs.',
+    es:'Construimos un puente vivo entre París y Ciudad de México a través de residencias, cine, música, moda y espacios creativos más seguros.'
+  },
+  'Our mission':{fr:'Notre mission',es:'Nuestra misión'},
+  'Who are we?':{fr:'Qui sommes-nous ?',es:'¿Quiénes somos?'},
+  'Support':{fr:'Soutenir',es:'Apoyar'},
+  'Projects':{fr:'Projets',es:'Proyectos'},
+  'Beautiful People':{fr:'De belles personnes',es:'Personas extraordinarias'},
+  'Beautiful':{fr:'Beautiful',es:'Beautiful'},
+  'People':{fr:'People',es:'People'},
+  'Night':{fr:'Night',es:'Night'},
+  'School':{fr:'School',es:'School'},
+  'Culture':{fr:'Culture',es:'Cultura'},
+  'Club':{fr:'Club',es:'Club'},
+  'Creature':{fr:'Creature',es:'Criatura'},
+  'Feature':{fr:'Feature',es:'Feature'},
+  'The':{fr:'The',es:'The'},
+  'Good News':{fr:'Good News',es:'Buenas noticias'},
+  'Upcoming':{fr:'À venir',es:'Próximement'},
+  'View our programmes →':{fr:'Voir nos programmes →',es:'Ver nuestros programas →'},
+  'Our role':{fr:'Notre rôle',es:'Nuestro papel'},
+  'Making culture a space for visibility, protection and transformation.':{
+    fr:'Faire de la culture un espace de visibilité, de protection et de transformation.',
+    es:'Hacer de la cultura un espacio de visibilidad, protección y transformación.'
+  },
+  'Create':{fr:'Créer',es:'Crear'},
+  'Connect':{fr:'Relier',es:'Conectar'},
+  'Protect':{fr:'Protéger',es:'Proteger'},
+  'Support queer and trans artists in the research, production and presentation of their work.':{
+    fr:'Soutenir les artistes queer et trans dans la recherche, la production et la présentation de leurs œuvres.',
+    es:'Apoyar a artistas queer y trans en la investigación, producción y presentación de sus obras.'
+  },
+  'Build lasting exchanges between artists, institutions and audiences in France and Mexico.':{
+    fr:'Créer des échanges durables entre artistes, institutions et publics en France et au Mexique.',
+    es:'Construir intercambios duraderos entre artistas, instituciones y públicos de Francia y México.'
+  },
+  'Develop safer creative spaces where everyone can work and exist freely.':{
+    fr:'Développer des espaces créatifs plus sûrs où chacun et chacune peut travailler et exister librement.',
+    es:'Desarrollar espacios creativos más seguros donde todas las personas puedan trabajar y existir libremente.'
+  },
+  'Date TBA':{fr:'Date à confirmer',es:'Fecha por confirmar'},
+  'Artist and community portraits, voices and stories that inspire.':{
+    fr:'Portraits d’artistes et de communautés, voix et récits inspirants.',
+    es:'Retratos de artistas y comunidades, voces e historias inspiradoras.'
+  },
+  'Workshops, education and conversations on art, identity, mental health and cultural rights.':{
+    fr:'Ateliers, apprentissage et conversations autour de l’art, de l’identité, de la santé mentale et des droits culturels.',
+    es:'Talleres, formación y conversaciones sobre arte, identidad, salud mental y derechos culturales.'
+  },
+  'Exhibitions, performances and gatherings that bring art, community and nightlife together.':{
+    fr:'Expositions, performances et rencontres entre art, communautés et vie nocturne.',
+    es:'Exposiciones, actuaciones y encuentros entre arte, comunidad y vida nocturna.'
+  },
+  'Creative projects and multidisciplinary collaborations across music, film, fashion and art.':{
+    fr:'Projets créatifs et collaborations pluridisciplinaires en musique, cinéma, mode et art.',
+    es:'Proyectos creativos y colaboraciones multidisciplinares en música, cine, moda y arte.'
+  },
+  'Impact, opportunities and community stories that create real change.':{
+    fr:'Impact, opportunités et histoires de communautés qui provoquent de vrais changements.',
+    es:'Impacto, oportunidades e historias comunitarias que generan cambios reales.'
+  },
+  'Lucid Dreams — Film & Dialogue':{fr:'Lucid Dreams — Film et dialogue',es:'Lucid Dreams — Cine y diálogo'},
+  'Cultural Exchange — Paris × Mexico City':{fr:'Échange culturel — Paris × Mexico',es:'Intercambio cultural — París × Ciudad de México'}
+};
+const originalNodes=new Map();
+function remember(){
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  let node;
+  while((node=walker.nextNode())){
+    if(!node.parentElement || node.parentElement.closest('script,style,.lang-menu,.lang-toggle'))continue;
+    const original=node.nodeValue;
+    if(original.trim())originalNodes.set(node,original);
+  }
+}
+function translateText(original,lang){
+  const trimmed=original.trim();
+  if(!trimmed)return original;
+  let translation=trimmed;
+  const catalogOriginal=englishToFrench.get(trimmed) || trimmed;
+  if(lang==='en')translation=en[trimmed] || trimmed;
+  if(lang==='fr')translation=addedTranslations[trimmed]?.fr || fr[trimmed] || catalogOriginal;
+  if(lang==='es')translation=addedTranslations[trimmed]?.es || es[trimmed] || es[catalogOriginal] || trimmed;
+  return original.replace(trimmed,translation);
+}
+function setLanguage(lang){
+  if(!['en','fr','es'].includes(lang))lang='en';
+  document.documentElement.lang=lang;
+  originalNodes.forEach((original,node)=>{if(node.isConnected)node.nodeValue=translateText(original,lang)});
+  document.title=pageTitles[lang]?.[originalTitle]||originalTitle;
+  const toggle=document.querySelector('.lang-toggle');
+  if(toggle){
+    toggle.textContent=lang.toUpperCase();
+    toggle.setAttribute('aria-label',lang==='fr'?'Changer de langue':lang==='es'?'Cambiar idioma':'Change language');
+    toggle.setAttribute('aria-expanded','false');
+  }
+  document.querySelectorAll('.lang-menu [data-lang]').forEach(b=>{
+    b.classList.toggle('active',b.dataset.lang===lang);
+    b.setAttribute('aria-checked',String(b.dataset.lang===lang));
+  });
+  try{localStorage.setItem('bcotn-language',lang)}catch(e){}
+  document.querySelector('.lang-menu')?.classList.remove('open');
+}
 const mobilePanel=document.querySelector('.mobile-panel'),menuButton=document.querySelector('.menu-button'),mobileQuery=window.matchMedia('(max-width:1100px)');
 function setMobileMenu(open){mobilePanel?.classList.toggle('open',open);menuButton?.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)}
 menuButton?.addEventListener('click',()=>setMobileMenu(!mobilePanel?.classList.contains('open')));
