@@ -16,5 +16,5 @@
 @media(max-width:600px){html body .site-header,html body.page-home .site-header,html body .site-header.is-compact{height:70px!important}}
 
 /* Additional breathing room at the left edge; preserve logo dimensions and nav geometry. */
-@media(min-width:1101px){html body .site-header .header-identity .brand,html body.page-home .site-header .header-identity .brand,html body .site-header.is-compact .header-identity .brand{margin-left:20px!important}}
-@media(max-width:1100px){html body .site-header .header-identity .brand,html body.page-home .site-header .header-identity .brand,html body .site-header.is-compact .header-identity .brand{margin-left:6px!important}}
+@media(min-width:1101px){html body .site-header .header-identity .brand,html body.page-home .site-header .header-identity .brand,html body .site-header.is-compact .header-identity .brand{margin-left:44px!important}}
+@media(max-width:1100px){html body .site-header .header-identity .brand,html body.page-home .site-header .header-identity .brand,html body .site-header.is-compact .header-identity .brand{margin-left:12px!important}}
