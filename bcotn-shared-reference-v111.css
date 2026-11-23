@@ -705,3 +705,18 @@ html body,html body.page-home,html body:not(.page-home){
     background-blend-mode:normal!important;
   }
 }
+
+/* v124: larger wordmark, closer to the left edge, with reserved navigation space. */
+@media(min-width:1101px){
+ html body .site-header,html body .site-header.is-compact{width:calc(100% - 32px)!important;max-width:none!important;margin:0 16px!important}
+ html body .site-header .header-shell,html body .site-header.is-compact .header-shell{grid-template-columns:minmax(260px,34%) minmax(0,1fr)!important;gap:clamp(12px,2vw,36px)!important}
+ html body .site-header .header-identity,html body .site-header.is-compact .header-identity{padding:0!important;justify-content:flex-start!important}
+ html body .site-header .brand,html body .site-header.is-compact .brand{width:min(100%,470px)!important;max-width:470px!important;min-width:0!important;margin:0!important}
+ html body .site-header .brand img,html body .site-header.is-compact .brand img{width:100%!important;max-width:100%!important;max-height:115px!important;height:auto!important;object-fit:contain!important;object-position:left center!important}
+ html body .site-header .links,html body .site-header.is-compact .links{gap:clamp(10px,1.6vw,30px)!important;justify-content:flex-end!important}
+}
+@media(max-width:1100px){
+ html body .site-header,html body .site-header.is-compact{width:calc(100% - 24px)!important;margin:0 12px!important}
+ html body .site-header .brand,html body .site-header.is-compact .brand{width:min(63vw,355px,calc(100vw - 128px))!important;max-width:355px!important;min-width:0!important;margin:0!important}
+ html body .site-header .brand img,html body .site-header.is-compact .brand img{width:100%!important;max-width:100%!important;max-height:66px!important;height:auto!important;object-fit:contain!important;object-position:left center!important}
+}
